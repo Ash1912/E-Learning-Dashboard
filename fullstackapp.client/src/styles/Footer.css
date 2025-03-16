@@ -1,0 +1,27 @@
+/* Footer Styling */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 12px 0;
+    background-color: #212529;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 14px;
+    color: #f8f9fa;
+    margin: 0;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .footer {
+        padding: 10px;
+    }
+
+    .footer-text {
+        font-size: 13px;
+    }
+}
