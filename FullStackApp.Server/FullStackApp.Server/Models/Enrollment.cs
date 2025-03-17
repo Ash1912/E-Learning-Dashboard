@@ -9,7 +9,7 @@ namespace FullStackApp.Server.Models
         public int CourseId { get; set; }
         
         [Required]
-        public string Status { get; set; } = "Enrolled"; // Default status
+        public string Status { get; set; } = "Unenrolled"; // Default status
         
         [Required]
         public int Progress { get; set; } = 0; // Default progress

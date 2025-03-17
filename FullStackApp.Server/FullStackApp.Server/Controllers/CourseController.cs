@@ -55,13 +55,13 @@ namespace FullStackApp.Server.Controllers
 
         // ✅ Create a new course (validates uniqueness)
         [HttpPost]
-        [Authorize(Roles = "Admin")]  // ✅ Only Admins can create courses
+        [Authorize]  // ✅ Only Admins can create courses
         public async Task<IActionResult> CreateCourse([FromBody] Course course)
         {
             try
             {
-                if (course == null || string.IsNullOrEmpty(course.Title) || string.IsNullOrEmpty(course.Description))
-                    return BadRequest(new { message = "Invalid course data" });
+                if (course == null || string.IsNullOrEmpty(course.Title) || string.IsNullOrEmpty(course.Description) || string.IsNullOrEmpty(course.VideoUrl))
+                    return BadRequest(new { message = "Invalid course data or All fields are required including Video URL." });
 
                 // Check if course title already exists
                 if (await _context.Courses.AnyAsync(c => c.Title == course.Title))
@@ -79,7 +79,7 @@ namespace FullStackApp.Server.Controllers
 
         // ✅ Update an existing course
         [HttpPut("{id}")]
-        [Authorize(Roles = "Admin")]  // ✅ Only Admins can update courses
+        [Authorize]  // ✅ Only Admins can update courses
         public async Task<IActionResult> UpdateCourse(int id, [FromBody] Course updatedCourse)
         {
             try
@@ -98,6 +98,7 @@ namespace FullStackApp.Server.Controllers
 
                 course.Title = updatedCourse.Title;
                 course.Description = updatedCourse.Description;
+                course.VideoUrl = updatedCourse.VideoUrl; // ✅ Update Video URL
                 await _context.SaveChangesAsync();
 
                 return Ok(new { message = "Course updated successfully!" });
@@ -110,7 +111,7 @@ namespace FullStackApp.Server.Controllers
 
         // ✅ Delete a course
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin")]  // ✅ Only Admins can delete courses
+        [Authorize]  // ✅ Only Admins can delete courses
         public async Task<IActionResult> DeleteCourse(int id)
         {
             try

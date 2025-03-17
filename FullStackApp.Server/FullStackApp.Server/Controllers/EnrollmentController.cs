@@ -21,9 +21,42 @@ namespace FullStackApp.Server.Controllers
             _context = context;
         }
 
+        // ✅ Enroll or Unenroll a user from a course
+        [HttpPost("toggle-enrollment")]
+        public async Task<IActionResult> ToggleEnrollment([FromBody] Enrollment enrollment)
+        {
+            try
+            {
+                var existingEnrollment = await _context.Enrollments
+                    .FirstOrDefaultAsync(e => e.UserId == enrollment.UserId && e.CourseId == enrollment.CourseId);
+
+                if (existingEnrollment != null)
+                {
+                    _context.Enrollments.Remove(existingEnrollment);
+                    await _context.SaveChangesAsync();
+                    return Ok(new { message = "Unenrolled from the course successfully." });
+                }
+
+                _context.Enrollments.Add(new Enrollment
+                {
+                    UserId = enrollment.UserId,
+                    CourseId = enrollment.CourseId,
+                    Status = "Enrolled",
+                    Progress = 0
+                });
+
+                await _context.SaveChangesAsync();
+                return Ok(new { message = "Enrolled successfully!" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Error processing enrollment", error = ex.Message });
+            }
+        }
+
         // ✅ Enroll a user in a course (prevents duplicate enrollments)
         [HttpPost("enroll")]
-        [Authorize(Roles = "Student")]  // ✅ Only Students can enroll
+        //[Authorize]  // ✅ Only Students can enroll
         public async Task<IActionResult> EnrollUser([FromBody] Enrollment enrollment)
         {
             try
@@ -46,7 +79,6 @@ namespace FullStackApp.Server.Controllers
 
         // ✅ Get all courses a user is enrolled in
         [HttpGet("{userId}")]
-        [Authorize(Roles = "Student")]  // ✅ Only Students can view their enrollments
         public async Task<IActionResult> GetUserEnrollments(int userId)
         {
             try
@@ -62,6 +94,7 @@ namespace FullStackApp.Server.Controllers
 
         // ✅ Update user's progress in a course
         [HttpPut("update-progress")]
+        //[Authorize(Roles = "Student")]
         public async Task<IActionResult> UpdateProgress([FromBody] Enrollment enrollment)
         {
             try

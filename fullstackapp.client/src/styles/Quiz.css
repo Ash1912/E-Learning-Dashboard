@@ -1,0 +1,81 @@
+/* ✅ General Styles */
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ✅ Quiz Title */
+.quiz-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ✅ Quiz Card */
+.quiz-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.quiz-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ Quiz Question */
+.quiz-question {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* ✅ Quiz Options */
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quiz-option {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.quiz-option:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* ✅ Feedback Message */
+.quiz-feedback {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    color: #dc3545;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .quiz-container {
+        padding: 10px;
+    }
+
+    .quiz-title {
+        font-size: 1.8rem;
+    }
+
+    .quiz-question {
+        font-size: 1.2rem;
+    }
+}

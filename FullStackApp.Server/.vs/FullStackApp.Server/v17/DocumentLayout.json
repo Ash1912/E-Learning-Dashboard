@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\models\\quizresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\models\\quizresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\models\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\models\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250317103306_ChangesinDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FullStackApp.Server\\Migrations\\20250317103306_ChangesinDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\models\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\models\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\controllers\\enrollmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,116 +27,20 @@
       "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\dtos\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\dtos\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\models\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\models\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250316111557_UpdatedFinalDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FullStackApp.Server\\Migrations\\20250316111557_UpdatedFinalDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\middleware\\errorhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\middleware\\errorhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\middleware\\requestloggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\middleware\\requestloggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250316103936_UpdatedRoleTypeinUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FullStackApp.Server\\Migrations\\20250316103936_UpdatedRoleTypeinUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250316063931_UpdateEnrollmentProgressType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FullStackApp.Server\\Migrations\\20250316063931_UpdateEnrollmentProgressType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250316062430_UpdatedDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FullStackApp.Server\\Migrations\\20250316062430_UpdatedDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\services\\quizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\services\\quizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\services\\enrollmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\services\\enrollmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\services\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\services\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\services\\iquizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\services\\iquizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\services\\ienrollmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\services\\ienrollmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250315114211_QuizUpdates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FullStackApp.Server\\Migrations\\20250315114211_QuizUpdates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250315113411_QuizUpdated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FullStackApp.Server\\Migrations\\20250315113411_QuizUpdated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\fullstackapp.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\fullstackapp.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250315112603_EnrollmentUpdated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FullStackApp.Server\\Migrations\\20250315112603_EnrollmentUpdated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250315111308_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FullStackApp.Server\\Migrations\\20250315111308_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|u:\\technical works\\projects\\e-learning-dashboard\\fullstackapp.server\\fullstackapp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0F8159-7BD5-4DC3-B349-499586027E88}|FullStackApp.Server\\FullStackApp.Server.csproj|solutionrelative:fullstackapp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -158,62 +50,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "20250317103306_ChangesinDb.cs",
+              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250317103306_ChangesinDb.cs",
+              "RelativeDocumentMoniker": "FullStackApp.Server\\Migrations\\20250317103306_ChangesinDb.cs",
+              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250317103306_ChangesinDb.cs",
+              "RelativeToolTip": "FullStackApp.Server\\Migrations\\20250317103306_ChangesinDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T10:33:06.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QuizController.cs",
+              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Controllers\\QuizController.cs",
+              "RelativeDocumentMoniker": "FullStackApp.Server\\Controllers\\QuizController.cs",
+              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Controllers\\QuizController.cs",
+              "RelativeToolTip": "FullStackApp.Server\\Controllers\\QuizController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAgwEYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T09:50:32.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "FullStackApp.Server\\Controllers\\AuthController.cs",
+              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "FullStackApp.Server\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAgwGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T09:44:09.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CourseController.cs",
               "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Controllers\\CourseController.cs",
               "RelativeDocumentMoniker": "FullStackApp.Server\\Controllers\\CourseController.cs",
               "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Controllers\\CourseController.cs",
               "RelativeToolTip": "FullStackApp.Server\\Controllers\\CourseController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAiwHIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAYwIYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T11:15:27.819Z",
+              "WhenOpened": "2025-03-17T07:28:03.985Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "User.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Models\\User.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Models\\User.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Models\\User.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "EnrollmentController.cs",
+              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Controllers\\EnrollmentController.cs",
+              "RelativeDocumentMoniker": "FullStackApp.Server\\Controllers\\EnrollmentController.cs",
+              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Controllers\\EnrollmentController.cs",
+              "RelativeToolTip": "FullStackApp.Server\\Controllers\\EnrollmentController.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAA3wHYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T11:03:59.693Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UpdateUserDTO.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\DTOs\\UpdateUserDTO.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\DTOs\\UpdateUserDTO.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\DTOs\\UpdateUserDTO.cs",
-              "RelativeToolTip": "FullStackApp.Server\\DTOs\\UpdateUserDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T06:56:22.774Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Course.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Models\\Course.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Models\\Course.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Models\\Course.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Models\\Course.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T11:04:26.634Z",
+              "WhenOpened": "2025-03-17T06:43:31.051Z",
               "EditorCaption": ""
             },
             {
@@ -224,426 +125,60 @@
               "RelativeDocumentMoniker": "FullStackApp.Server\\Models\\Enrollment.cs",
               "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Models\\Enrollment.cs",
               "RelativeToolTip": "FullStackApp.Server\\Models\\Enrollment.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAUwBIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T11:04:50.813Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Quiz.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Models\\Quiz.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Models\\Quiz.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Models\\Quiz.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Models\\Quiz.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAwwA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T11:05:21.694Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "QuizResponse.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Models\\QuizResponse.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Models\\QuizResponse.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Models\\QuizResponse.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Models\\QuizResponse.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAUwAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T16:09:55.2Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Program.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Program.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Program.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Program.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwGIAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T11:05:59.415Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EnrollmentController.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Controllers\\EnrollmentController.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Controllers\\EnrollmentController.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Controllers\\EnrollmentController.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Controllers\\EnrollmentController.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T11:22:25.715Z",
+              "WhenOpened": "2025-03-17T06:34:41.674Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "QuizController.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Controllers\\QuizController.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Controllers\\QuizController.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Controllers\\QuizController.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Controllers\\QuizController.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
+              "Title": "Course.cs",
+              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "FullStackApp.Server\\Models\\Course.cs",
+              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Models\\Course.cs",
+              "RelativeToolTip": "FullStackApp.Server\\Models\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T11:26:55.605Z",
+              "WhenOpened": "2025-03-17T06:34:32.466Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CourseService.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\CourseService.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Services\\CourseService.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\CourseService.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Services\\CourseService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAzwEkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "User.cs",
+              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Models\\User.cs",
+              "RelativeDocumentMoniker": "FullStackApp.Server\\Models\\User.cs",
+              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Models\\User.cs",
+              "RelativeToolTip": "FullStackApp.Server\\Models\\User.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBAAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T16:15:31.036Z",
+              "WhenOpened": "2025-03-17T06:33:51.699Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\appsettings.json",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\appsettings.json",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\appsettings.json",
-              "RelativeToolTip": "FullStackApp.Server\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-15T11:03:00.761Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Controllers\\UserController.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Controllers\\UserController.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T11:14:41.748Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Controllers\\AuthController.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAgwGwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T11:30:47.822Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "RegisterDTO.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\DTOs\\RegisterDTO.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\DTOs\\RegisterDTO.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\DTOs\\RegisterDTO.cs",
-              "RelativeToolTip": "FullStackApp.Server\\DTOs\\RegisterDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T05:55:09.025Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "LoginDTO.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\DTOs\\LoginDTO.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\DTOs\\LoginDTO.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\DTOs\\LoginDTO.cs",
-              "RelativeToolTip": "FullStackApp.Server\\DTOs\\LoginDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T05:56:13.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "20250316111557_UpdatedFinalDb.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250316111557_UpdatedFinalDb.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Migrations\\20250316111557_UpdatedFinalDb.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250316111557_UpdatedFinalDb.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Migrations\\20250316111557_UpdatedFinalDb.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T11:15:57.532Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "RequestLoggingMiddleware.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Middleware\\RequestLoggingMiddleware.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Middleware\\RequestLoggingMiddleware.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Middleware\\RequestLoggingMiddleware.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Middleware\\RequestLoggingMiddleware.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwCUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T11:00:35.827Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ErrorHandlingMiddleware.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Middleware\\ErrorHandlingMiddleware.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Middleware\\ErrorHandlingMiddleware.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Middleware\\ErrorHandlingMiddleware.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Middleware\\ErrorHandlingMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T11:01:02.702Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "20250316103936_UpdatedRoleTypeinUser.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250316103936_UpdatedRoleTypeinUser.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Migrations\\20250316103936_UpdatedRoleTypeinUser.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250316103936_UpdatedRoleTypeinUser.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Migrations\\20250316103936_UpdatedRoleTypeinUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T10:39:36.686Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "20250316063931_UpdateEnrollmentProgressType.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250316063931_UpdateEnrollmentProgressType.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Migrations\\20250316063931_UpdateEnrollmentProgressType.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250316063931_UpdateEnrollmentProgressType.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Migrations\\20250316063931_UpdateEnrollmentProgressType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T06:39:31.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "EnrollmentService.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\EnrollmentService.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Services\\EnrollmentService.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\EnrollmentService.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Services\\EnrollmentService.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAgwAYAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T16:15:56.822Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Services\\UserService.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\UserService.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Services\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T16:15:00.669Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "20250316062430_UpdatedDb.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250316062430_UpdatedDb.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Migrations\\20250316062430_UpdatedDb.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250316062430_UpdatedDb.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Migrations\\20250316062430_UpdatedDb.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T06:24:31.04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "QuizService.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\QuizService.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Services\\QuizService.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\QuizService.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Services\\QuizService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T16:16:29.937Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Services\\AuthService.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\AuthService.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Services\\AuthService.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAkwAoAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T16:13:46.102Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ICourseService.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\ICourseService.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Services\\ICourseService.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\ICourseService.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Services\\ICourseService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T16:15:14.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\IAuthService.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Services\\IAuthService.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\IAuthService.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Services\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T16:13:30.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 8,
               "Title": "IUserService.cs",
               "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\IUserService.cs",
               "RelativeDocumentMoniker": "FullStackApp.Server\\Services\\IUserService.cs",
               "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\IUserService.cs",
               "RelativeToolTip": "FullStackApp.Server\\Services\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T16:14:47.304Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Data\\AppDbContext.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T11:01:55.057Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "IQuizService.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\IQuizService.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Services\\IQuizService.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\IQuizService.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Services\\IQuizService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T16:16:14.316Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "IEnrollmentService.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\IEnrollmentService.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Services\\IEnrollmentService.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Services\\IEnrollmentService.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Services\\IEnrollmentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T16:15:44.677Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "20250315114211_QuizUpdates.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250315114211_QuizUpdates.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Migrations\\20250315114211_QuizUpdates.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250315114211_QuizUpdates.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Migrations\\20250315114211_QuizUpdates.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T11:42:11.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-17T06:33:49.122Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "20250315113411_QuizUpdated.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250315113411_QuizUpdated.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Migrations\\20250315113411_QuizUpdated.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250315113411_QuizUpdated.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Migrations\\20250315113411_QuizUpdated.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Program.cs",
+              "RelativeDocumentMoniker": "FullStackApp.Server\\Program.cs",
+              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Program.cs",
+              "RelativeToolTip": "FullStackApp.Server\\Program.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T11:34:11.307Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "20250315112603_EnrollmentUpdated.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250315112603_EnrollmentUpdated.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Migrations\\20250315112603_EnrollmentUpdated.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250315112603_EnrollmentUpdated.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Migrations\\20250315112603_EnrollmentUpdated.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T11:26:04.043Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "FullStackApp.Server",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\FullStackApp.Server.csproj",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\FullStackApp.Server.csproj",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\FullStackApp.Server.csproj",
-              "RelativeToolTip": "FullStackApp.Server\\FullStackApp.Server.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-15T11:11:07.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "20250315111308_InitialCreate.cs",
-              "DocumentMoniker": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250315111308_InitialCreate.cs",
-              "RelativeDocumentMoniker": "FullStackApp.Server\\Migrations\\20250315111308_InitialCreate.cs",
-              "ToolTip": "U:\\Technical Works\\Projects\\E-Learning-Dashboard\\FullStackApp.Server\\FullStackApp.Server\\Migrations\\20250315111308_InitialCreate.cs",
-              "RelativeToolTip": "FullStackApp.Server\\Migrations\\20250315111308_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T11:13:08.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-17T06:33:11.279Z"
             }
           ]
         }

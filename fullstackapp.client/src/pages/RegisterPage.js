@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { register } from "../services/authService";
 import { useNavigate } from "react-router-dom";
-import { Card, Form, Button, Alert, Spinner } from "react-bootstrap";
+import { Card, Form, Button, Alert, Spinner, InputGroup } from "react-bootstrap";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const RegisterPage = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -17,19 +19,24 @@ const RegisterPage = () => {
         setLoading(true);
         setError(null);
         setSuccess(null);
-    
+
+        if (!name.trim() || !email.trim() || !password.trim()) {
+            setError("All fields are required.");
+            setLoading(false);
+            return;
+        }
+
         try {
-            await register({ name, email, password });
-    
+            await register({ name: name.trim(), email: email.trim(), password: password.trim() });
+
             setSuccess("Registration successful! Redirecting to login...");
             setTimeout(() => navigate("/login"), 2000);
-        } catch (error) {
-            setError(error || "Registration failed. Please try again.");
+        } catch (err) {
+            setError(err?.message || "Registration failed. Please try again.");
         } finally {
             setLoading(false);
         }
     };
-    
 
     return (
         <div className="container mt-5 d-flex justify-content-center">
@@ -67,13 +74,21 @@ const RegisterPage = () => {
 
                             <Form.Group className="mb-3">
                                 <Form.Label>Password</Form.Label>
-                                <Form.Control
-                                    type="password"
-                                    placeholder="Enter your password"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    required
-                                />
+                                <InputGroup>
+                                    <Form.Control
+                                        type={showPassword ? "text" : "password"}
+                                        placeholder="Enter your password"
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                        required
+                                    />
+                                    <Button
+                                        variant="outline-secondary"
+                                        onClick={() => setShowPassword(!showPassword)}
+                                    >
+                                        {showPassword ? <FaEyeSlash /> : <FaEye />}
+                                    </Button>
+                                </InputGroup>
                             </Form.Group>
 
                             <Button variant="success" type="submit" className="w-100" disabled={loading}>

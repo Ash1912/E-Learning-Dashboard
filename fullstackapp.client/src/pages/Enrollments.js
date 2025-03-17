@@ -10,7 +10,7 @@ const Enrollments = () => {
     const [error, setError] = useState(null);
     const user = useSelector(state => state.auth.user);
 
-    // ✅ useCallback to prevent function recreation in useEffect
+    // ✅ Fetch all courses
     const loadCourses = useCallback(async () => {
         try {
             const data = await getCourses();
@@ -20,6 +20,7 @@ const Enrollments = () => {
         }
     }, []);
 
+    // ✅ Fetch user's enrollments
     const loadEnrollments = useCallback(async () => {
         try {
             if (!user) return;
@@ -28,23 +29,24 @@ const Enrollments = () => {
         } catch (err) {
             setError("Failed to load enrollments. Please try again.");
         }
-    }, [user]); // ✅ Depend on `user`
+    }, [user]);
 
     useEffect(() => {
         loadCourses();
         loadEnrollments();
-    }, [loadCourses, loadEnrollments]); // ✅ Include both in the dependency array
+    }, [loadCourses, loadEnrollments]);
 
-    const handleEnroll = async (courseId) => {
+    // ✅ Toggle Enrollment (Enroll/Unenroll)
+    const handleToggleEnrollment = async (courseId) => {
         try {
             await enrollInCourse(user.id, courseId);
-            loadEnrollments();
+            loadEnrollments(); // ✅ Refresh enrollments after toggle
         } catch (err) {
-            setError("Failed to enroll in course. Please try again.");
+            setError("Failed to update enrollment. Please try again.");
         }
     };
 
-    // Check if user is already enrolled in a course
+    // ✅ Check if user is enrolled in a course
     const isEnrolled = (courseId) => enrollments.some(enroll => enroll.courseId === courseId);
 
     return (
@@ -66,11 +68,10 @@ const Enrollments = () => {
                                     <Card.Title>{course.title}</Card.Title>
                                     <Card.Text>{course.description}</Card.Text>
                                     <Button 
-                                        variant={isEnrolled(course.id) ? "secondary" : "primary"} 
-                                        disabled={isEnrolled(course.id)} 
-                                        onClick={() => handleEnroll(course.id)}
+                                        variant={isEnrolled(course.id) ? "danger" : "primary"} 
+                                        onClick={() => handleToggleEnrollment(course.id)}
                                     >
-                                        {isEnrolled(course.id) ? "Enrolled" : "Enroll"}
+                                        {isEnrolled(course.id) ? "Unenroll" : "Enroll"}
                                     </Button>
                                 </Card.Body>
                             </Card>

@@ -48,7 +48,7 @@ namespace FullStackApp.Server.Controllers
                     Name = registerDto.Name,
                     Email = registerDto.Email,
                     PasswordHash = hashedPassword,
-                    Role = registerDto.Role ?? "Student" // Assign default role if none provided
+                    //Role = registerDto.Role ?? "Student" // Assign default role if none provided
                 };
 
                 _context.Users.Add(user);
@@ -91,7 +91,7 @@ namespace FullStackApp.Server.Controllers
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Email),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(ClaimTypes.Role, user.Role) // ✅ Add role to token
+                //new Claim(ClaimTypes.Role, user.Role) // ✅ Add role to token
             };
 
             var token = new JwtSecurityToken(

@@ -1,21 +1,26 @@
-import axios from 'axios';
+import axios from "axios";
 
-const API_URL = 'https://localhost:7209/api/Enrollment';
+const API_URL = "https://localhost:7209/api/Enrollment";
 
-// ✅ Helper function to attach authentication headers
-const getAuthHeaders = () => ({
-    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
-});
+// ✅ Helper function to attach authentication headers (if token exists)
+const getAuthHeaders = () => {
+    const token = localStorage.getItem("token");
+    const headers = { "Content-Type": "application/json" };
 
-// ✅ Enroll in a course (Student Only)
-export const enrollInCourse = async (userId, courseId) => {
+    if (token) headers["Authorization"] = `Bearer ${token}`;
+
+    return { headers };
+};
+
+// ✅ Toggle Enrollment (Enroll/Unenroll in a course)
+export const toggleEnrollment = async (userId, courseId) => {
     try {
-        const enrollmentData = { userId, courseId, status: "Enrolled", progress: 0 };
-        const response = await axios.post(`${API_URL}/enroll`, enrollmentData, getAuthHeaders());
+        const enrollmentData = { userId, courseId };
+        const response = await axios.post(`${API_URL}/toggle-enrollment`, enrollmentData, getAuthHeaders());
         return response.data;
     } catch (error) {
-        console.error("Error enrolling in course:", error.response?.data || error.message);
-        throw new Error(error.response?.data || "Failed to enroll in course");
+        console.error("Error toggling enrollment:", error.response?.data || error.message);
+        throw new Error(error.response?.data?.message || "Failed to toggle enrollment");
     }
 };
 
@@ -26,17 +31,20 @@ export const getUserEnrollments = async (userId) => {
         return response.data;
     } catch (error) {
         console.error("Error fetching enrollments:", error.response?.data || error.message);
-        throw new Error(error.response?.data || "Failed to fetch enrollments");
+        throw new Error(error.response?.data?.message || "Failed to fetch enrollments");
     }
 };
 
-// ✅ Update progress in a course
+// ✅ Update Progress (Ensure API compatibility)
 export const updateProgress = async (userId, courseId, progress) => {
     try {
-        const response = await axios.put(`${API_URL}/update-progress`, { userId, courseId, progress }, getAuthHeaders());
+        const progressData = { userId, courseId, progress }; // ✅ Match Backend Model
+        console.log("Updating Progress:", progressData);
+
+        const response = await axios.put(`${API_URL}/update-progress`, progressData, getAuthHeaders());
         return response.data;
     } catch (error) {
         console.error("Error updating progress:", error.response?.data || error.message);
-        throw new Error(error.response?.data || "Failed to update progress");
+        throw new Error(error.response?.data?.message || "Failed to update progress");
     }
 };

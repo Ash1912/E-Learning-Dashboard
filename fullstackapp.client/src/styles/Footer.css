@@ -1,24 +1,47 @@
-/* Footer Styling */
+/* ✅ Footer Styling */
 .footer {
-    position: fixed;
-    bottom: 0;
+    position: relative; /* Ensures it doesn't overlap content */
     width: 100%;
-    padding: 12px 0;
+    padding: 15px 0;
     background-color: #212529;
-    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-/* Footer Text */
+/* ✅ Footer Text */
 .footer-text {
     font-size: 14px;
     color: #f8f9fa;
     margin: 0;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Responsive Fixes */
+/* ✅ Hover Effect */
+.footer-text:hover {
+    color: #ffcc00;
+    cursor: pointer;
+}
+
+/* ✅ Ensure Footer Stays at Bottom */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* ✅ Responsive Fixes */
 @media (max-width: 768px) {
     .footer {
-        padding: 10px;
+        padding: 12px;
     }
 
     .footer-text {
