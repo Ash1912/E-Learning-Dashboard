@@ -27,7 +27,6 @@ const Quiz = () => {
         loadQuizzes();
     }, [loadQuizzes]);
 
-    // ✅ Handle quiz submission
     const handleSubmit = async (quizId, answer) => {
         if (submittedAnswers[quizId]) {
             alert("You have already submitted an answer for this question.");
@@ -40,7 +39,7 @@ const Quiz = () => {
         } catch (err) {
             setError("Failed to submit quiz. Please try again.");
         }
-    };
+    }; 
 
     return (
         <Container className="quiz-container">

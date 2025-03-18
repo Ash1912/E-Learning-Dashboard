@@ -8,6 +8,7 @@ const EditCoursePage = () => {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [videoUrl, setVideoUrl] = useState("");
+    const [imageUrl, setImageUrl] = useState("");
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(null);
@@ -20,6 +21,7 @@ const EditCoursePage = () => {
                 setTitle(courseData.title);
                 setDescription(courseData.description);
                 setVideoUrl(courseData.videoUrl);
+                setImageUrl(courseData.imageUrl);
                 setLoading(false);
             } catch (error) {
                 setError("Failed to load course details.");
@@ -31,13 +33,13 @@ const EditCoursePage = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!title || !description || !videoUrl) {
+        if (!title || !description || !videoUrl || !imageUrl) {
             setError("All fields are required.");
             return;
         }
 
         try {
-            await updateCourse(courseId, { title, description, videoUrl });
+            await updateCourse(courseId, { title, description, videoUrl, imageUrl });
             setSuccess("Course updated successfully!");
             setTimeout(() => navigate("/dashboard"), 2000); // Redirect after 2s
         } catch (error) {
@@ -82,6 +84,16 @@ const EditCoursePage = () => {
                                 type="text"
                                 value={videoUrl}
                                 onChange={(e) => setVideoUrl(e.target.value)}
+                                required
+                            />
+                        </Form.Group>
+
+                        <Form.Group className="mb-3">
+                            <Form.Label>Image URL</Form.Label>
+                            <Form.Control
+                                type="text"
+                                value={imageUrl}
+                                onChange={(e) => setImageUrl(e.target.value)}
                                 required
                             />
                         </Form.Group>

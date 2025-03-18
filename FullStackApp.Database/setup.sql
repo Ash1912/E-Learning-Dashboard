@@ -64,24 +64,40 @@ VALUES
 ('Bob Wilson', 'bob@example.com', 'bob@123');
 
 -- ✅ Insert Sample Courses
-INSERT INTO Courses (Title, Description, VideoUrl)
+INSERT INTO Courses (Title, Description, VideoUrl, ImageUrl)
 VALUES 
-('React for Beginners', 'Learn the basics of React.', 'https://www.youtube.com/watch?v=Ke90Tje7VS0'),
-('ASP.NET Core Basics', 'Introduction to .NET Core.', 'https://www.youtube.com/watch?v=fmvcAzHpsk8'),
-('JavaScript Mastery', 'Deep dive into JavaScript concepts.', 'https://www.youtube.com/watch?v=W6NZfCO5SIk'),
-('Database Design', 'Learn about relational databases and SQL.', 'https://www.youtube.com/watch?v=ztHopE5Wnpc'),
-('Python for Data Science', 'Master Python for data analysis.', 'https://www.youtube.com/watch?v=LHBE6Q9XlzI'),
-('Machine Learning Basics', 'Introduction to Machine Learning concepts.', 'https://www.youtube.com/watch?v=Gv9_4yMHFhI');
+('React for Beginners', 'Learn the basics of React.', 
+ 'https://www.youtube.com/watch?v=Ke90Tje7VS0', 
+ 'https://i.ytimg.com/vi/Ke90Tje7VS0/maxresdefault.jpg'),
+
+('ASP.NET Core Basics', 'Introduction to .NET Core.', 
+ 'https://www.youtube.com/watch?v=fmvcAzHpsk8', 
+ 'https://i.ytimg.com/vi/fmvcAzHpsk8/maxresdefault.jpg'),
+
+('JavaScript Mastery', 'Deep dive into JavaScript concepts.', 
+ 'https://www.youtube.com/watch?v=W6NZfCO5SIk', 
+ 'https://i.ytimg.com/vi/W6NZfCO5SIk/maxresdefault.jpg'),
+
+('Database Design', 'Learn about relational databases and SQL.', 
+ 'https://www.youtube.com/watch?v=ztHopE5Wnpc', 
+ 'https://i.ytimg.com/vi/ztHopE5Wnpc/maxresdefault.jpg'),
+
+('Python for Data Science', 'Master Python for data analysis.', 
+ 'https://www.youtube.com/watch?v=LHBE6Q9XlzI', 
+ 'https://i.ytimg.com/vi/LHBE6Q9XlzI/maxresdefault.jpg'),
+
+('Machine Learning Basics', 'Introduction to Machine Learning concepts.', 
+ 'https://www.youtube.com/watch?v=Gv9_4yMHFhI', 
+ 'https://i.ytimg.com/vi/Gv9_4yMHFhI/maxresdefault.jpg');
+
 
 -- ✅ Insert Sample Enrollments
 INSERT INTO Enrollments (UserId, CourseId, Status, Progress)
 VALUES 
-(2, 1, 'Enrolled', 20),  
-(3, 2, 'Enrolled', 50),  
-(4, 3, 'Completed', 100), 
-(5, 4, 'Enrolled', 10),  
-(2, 5, 'Enrolled', 30),  
-(3, 6, 'Dropped', 0);    
+(2, 1, 'Unenrolled', 0),  
+(2, 2, 'Unenrolled', 50),  
+(2, 3, 'Enrolled', 100), 
+(2, 4, 'Unenrolled', 10);    
 
 -- ✅ Insert Sample Quizzes
 INSERT INTO Quizzes (CourseId, Question, OptionA, OptionB, OptionC, OptionD, CorrectAnswer)
@@ -117,4 +133,5 @@ SELECT * FROM Quizzes;
 SELECT * FROM QuizResponses;
 
 -- ✅ Clear All Quiz Responses
-TRUNCATE TABLE QuizResponses;
+TRUNCATE TABLE Courses;
+

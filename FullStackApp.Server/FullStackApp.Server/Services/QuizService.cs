@@ -20,18 +20,28 @@ namespace FullStackApp.Server.Services
         }
 
         // ✅ Submit a quiz response and validate the answer
-        public async Task<bool> SubmitQuizResponse(QuizResponse response)
+        public async Task<string> SubmitQuizResponse(QuizResponse response)
         {
             var quiz = await _context.Quizzes.FindAsync(response.QuizId);
-            if (quiz == null) return false;
+            if (quiz == null) return "Quiz not found!";
 
-            // Check if the submitted answer is correct
+            // ✅ Prevent multiple submissions
+            var existingResponse = await _context.QuizResponses
+                .FirstOrDefaultAsync(r => r.QuizId == response.QuizId && r.UserId == response.UserId);
+
+            if (existingResponse != null)
+                return "You have already attempted this quiz!";
+
+            // ✅ Ensure selected answer is valid
+            if (!new[] { quiz.OptionA, quiz.OptionB, quiz.OptionC, quiz.OptionD }.Contains(response.SelectedAnswer))
+                return "Invalid answer selection.";
+
             response.IsCorrect = response.SelectedAnswer == quiz.CorrectAnswer;
 
             _context.QuizResponses.Add(response);
             await _context.SaveChangesAsync();
 
-            return response.IsCorrect;
+            return response.IsCorrect ? "Correct answer!" : $"Incorrect! The correct answer is: {quiz.CorrectAnswer}";
         }
     }
 }

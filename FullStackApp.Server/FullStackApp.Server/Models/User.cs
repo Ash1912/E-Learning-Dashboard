@@ -13,7 +13,7 @@ namespace FullStackApp.Server.Models
         public string Email { get; set; }
         [Required]
         public string PasswordHash { get; set; }
-        //[Required]
-        //public string Role { get; set; } = "Student";  // Default role is "Student"
+        [Required]
+        public string Role { get; set; } = "Student";  // Default role is "Student"
     }
 }

@@ -9,60 +9,47 @@ const getAuthHeaders = () => {
 
     if (token) headers["Authorization"] = `Bearer ${token}`;
 
-    return { headers };
+    return headers;
+};
+
+// ✅ Centralized API request handler
+const requestHandler = async (method, url, data = null, auth = false) => {
+    try {
+        const config = auth ? { headers: getAuthHeaders() } : {};
+        const response = await axios({ method, url, data, ...config });
+        return response.data;
+    } catch (error) {
+        console.error(`API Error (${method.toUpperCase()} ${url}):`, error.response?.data || error.message);
+        throw error.response?.data?.message || "An error occurred while processing the request.";
+    }
 };
 
 // ✅ Get all courses
-export const getCourses = async () => {
-    try {
-        const response = await axios.get(API_URL, getAuthHeaders());
-        return response.data;
-    } catch (error) {
-        console.error("Error fetching courses:", error.response?.data?.message || error.message);
-        throw error.response?.data?.message || "Failed to fetch courses";
-    }
-};
+export const getCourses = () => requestHandler("get", API_URL, null, true);
 
 // ✅ Get a single course by ID
-export const getCourseById = async (courseId) => {
-    try {
-        const response = await axios.get(`${API_URL}/${courseId}`, getAuthHeaders());
-        return response.data;
-    } catch (error) {
-        console.error(`Error fetching course with ID ${courseId}:`, error.response?.data?.message || error.message);
-        throw error.response?.data?.message || "Failed to fetch course details";
-    }
-};
+export const getCourseById = (courseId) => requestHandler("get", `${API_URL}/${courseId}`, null, true);
 
-// ✅ Create a new course
+// ✅ Create a new course (Admin Only)
 export const createCourse = async (courseData) => {
-    try {
-        const response = await axios.post(API_URL, courseData, getAuthHeaders());
-        return response.data;
-    } catch (error) {
-        console.error("Error creating course:", error.response?.data?.message || error.message);
-        throw error.response?.data?.message || "Failed to create course";
-    }
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user?.role !== "Admin") throw new Error("Unauthorized: Only Admins can create courses.");
+
+    return requestHandler("post", API_URL, courseData, true);
 };
 
-// ✅ Update an existing course
+// ✅ Update an existing course (Admin Only)
 export const updateCourse = async (courseId, courseData) => {
-    try {
-        const response = await axios.put(`${API_URL}/${courseId}`, courseData, getAuthHeaders());
-        return response.data;
-    } catch (error) {
-        console.error(`Error updating course with ID ${courseId}:`, error.response?.data?.message || error.message);
-        throw error.response?.data?.message || "Failed to update course";
-    }
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user?.role !== "Admin") throw new Error("Unauthorized: Only Admins can update courses.");
+
+    return requestHandler("put", `${API_URL}/${courseId}`, courseData, true);
 };
 
-// ✅ Delete a course
+// ✅ Delete a course (Admin Only)
 export const deleteCourse = async (courseId) => {
-    try {
-        const response = await axios.delete(`${API_URL}/${courseId}`, getAuthHeaders());
-        return response.data;
-    } catch (error) {
-        console.error(`Error deleting course with ID ${courseId}:`, error.response?.data?.message || error.message);
-        throw error.response?.data?.message || "Failed to delete course";
-    }
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user?.role !== "Admin") throw new Error("Unauthorized: Only Admins can delete courses.");
+
+    return requestHandler("delete", `${API_URL}/${courseId}`, null, true);
 };

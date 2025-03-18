@@ -2,7 +2,15 @@
 .navbar-custom {
     background-color: #212529;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px 15px;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ✅ Ensure content is not hidden under navbar */
+body {
+    padding-top: 70px;
 }
 
 /* ✅ Brand Logo */
@@ -11,6 +19,14 @@
     font-weight: bold;
     color: #f8f9fa !important;
     transition: color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo-icon {
+    font-size: 30px;
+    margin-right: 10px;
+    color: #ffcc00;
 }
 
 .brand-logo:hover {
@@ -24,10 +40,58 @@
     color: white !important;
     padding: 8px 12px;
     transition: color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
 }
 
-.nav-item:hover {
+/* ✅ Home Button */
+.nav-home-btn {
+    font-weight: bold;
+    color: white;
+    border: 1px solid white;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    margin-right: 10px;
+}
+
+.nav-home-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* ✅ Profile Button */
+.nav-profile-btn {
+    font-weight: bold;
+    color: white;
+    border: 1px solid white;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    margin-right: 10px;
+}
+
+.nav-profile-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* ✅ Student Panel & Admin Panel */
+.student-panel,
+.admin-panel {
+    font-size: 1rem;
+    font-weight: bold;
     color: #ffcc00 !important;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+}
+
+/* ✅ Admin Panel Special Styling */
+.admin-panel {
+    color: #ffc107;
 }
 
 /* ✅ Welcome Text & Profile Icon */
@@ -73,19 +137,58 @@
 /* ✅ Icons */
 .nav-icon {
     font-size: 18px;
+    margin-right: 5px;
 }
 
-/* ✅ Responsive Fixes */
-@media (max-width: 768px) {
+/* ✅ Responsive Navbar */
+@media (max-width: 992px) {
+    .navbar-custom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .nav-item,
-    .nav-btn {
+    .nav-btn,
+    .nav-home-btn,
+    .nav-profile-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin: 5px 0;
+    }
+
+    .welcome-text {
+        display: block;
         text-align: center;
         width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* ✅ Mobile Screens */
+@media (max-width: 768px) {
+    .navbar-custom {
+        flex-direction: column;
         padding: 10px;
     }
 
-    .logout-btn {
+    .brand-logo {
+        justify-content: center;
         width: 100%;
-        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .nav-home-btn,
+    .nav-profile-btn,
+    .logout-btn {
+        width: 90%;
+        margin: 5px auto;
+    }
+
+    .welcome-text {
+        font-size: 0.9rem;
+        text-align: center;
+        margin-bottom: 5px;
     }
 }

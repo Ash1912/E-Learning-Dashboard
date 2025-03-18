@@ -224,18 +224,12 @@
   },
   {
     "ContainingType": "FullStackApp.Server.Controllers.UserController",
-    "Method": "Register",
-    "RelativePath": "api/User/register",
-    "HttpMethod": "POST",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/User/all",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "registerDto",
-        "Type": "FullStackApp.Server.DTOs.RegisterDTO",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

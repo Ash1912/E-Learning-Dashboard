@@ -22,6 +22,7 @@ namespace FullStackApp.Server.Controllers
 
         // ✅ Get all courses (async + error handling)
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> GetCourses()
         {
             try
@@ -37,6 +38,7 @@ namespace FullStackApp.Server.Controllers
 
         // ✅ Get a single course by ID
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetCourseById(int id)
         {
             try
@@ -55,16 +57,16 @@ namespace FullStackApp.Server.Controllers
 
         // ✅ Create a new course (validates uniqueness)
         [HttpPost]
-        [Authorize]  // ✅ Only Admins can create courses
+        [Authorize(Roles = "Admin")]  // ✅ Only Admins can create courses
         public async Task<IActionResult> CreateCourse([FromBody] Course course)
         {
             try
             {
-                if (course == null || string.IsNullOrEmpty(course.Title) || string.IsNullOrEmpty(course.Description) || string.IsNullOrEmpty(course.VideoUrl))
-                    return BadRequest(new { message = "Invalid course data or All fields are required including Video URL." });
+                if (course == null || string.IsNullOrEmpty(course.Title) || string.IsNullOrEmpty(course.Description) || string.IsNullOrEmpty(course.VideoUrl) || string.IsNullOrEmpty(course.ImageUrl))
+                    return BadRequest(new { message = "Invalid course data or All fields are required including Video URL and Image URL." });
 
-                // Check if course title already exists
-                if (await _context.Courses.AnyAsync(c => c.Title == course.Title))
+                // ✅ Case-Insensitive Title Check
+                if (await _context.Courses.AnyAsync(c => c.Title.ToLower() == course.Title.ToLower()))
                     return BadRequest(new { message = "Course with this title already exists." });
 
                 _context.Courses.Add(course);
@@ -79,7 +81,7 @@ namespace FullStackApp.Server.Controllers
 
         // ✅ Update an existing course
         [HttpPut("{id}")]
-        [Authorize]  // ✅ Only Admins can update courses
+        [Authorize(Roles = "Admin")]  // ✅ Only Admins can update courses
         public async Task<IActionResult> UpdateCourse(int id, [FromBody] Course updatedCourse)
         {
             try
@@ -89,16 +91,19 @@ namespace FullStackApp.Server.Controllers
                     return NotFound(new { message = "Course not found" });
 
                 // Validate input
-                if (string.IsNullOrEmpty(updatedCourse.Title) || string.IsNullOrEmpty(updatedCourse.Description))
-                    return BadRequest(new { message = "Invalid course data" });
+                if (string.IsNullOrEmpty(updatedCourse.Title) || string.IsNullOrEmpty(updatedCourse.Description) || string.IsNullOrEmpty(updatedCourse.ImageUrl))
+                {
+                    return BadRequest(new { message = "All fields are required, including Image URL." });
+                }
 
-                // Ensure unique course title (excluding current course)
-                if (await _context.Courses.AnyAsync(c => c.Title == updatedCourse.Title && c.Id != id))
+                // ✅ Case-Insensitive Title Check (excluding current course)
+                if (await _context.Courses.AnyAsync(c => c.Title.ToLower() == updatedCourse.Title.ToLower() && c.Id != id))
                     return BadRequest(new { message = "Course with this title already exists." });
 
                 course.Title = updatedCourse.Title;
                 course.Description = updatedCourse.Description;
                 course.VideoUrl = updatedCourse.VideoUrl; // ✅ Update Video URL
+                course.ImageUrl = updatedCourse.ImageUrl;  // ✅ Update Image URL
                 await _context.SaveChangesAsync();
 
                 return Ok(new { message = "Course updated successfully!" });
@@ -111,7 +116,7 @@ namespace FullStackApp.Server.Controllers
 
         // ✅ Delete a course
         [HttpDelete("{id}")]
-        [Authorize]  // ✅ Only Admins can delete courses
+        [Authorize(Roles = "Admin")]  // ✅ Only Admins can delete courses
         public async Task<IActionResult> DeleteCourse(int id)
         {
             try

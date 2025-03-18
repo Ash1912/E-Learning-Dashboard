@@ -18,17 +18,17 @@ const Home = () => {
       {/* Features Section */}
       <Features>
         <FeatureCard>
-          <FaChalkboardTeacher size={50} className="feature-icon" />
+          <FaChalkboardTeacher size={50} className="feature-icon" aria-label="Expert Instructors" />
           <h3>Expert Instructors</h3>
           <p>Learn from professionals with hands-on experience.</p>
         </FeatureCard>
         <FeatureCard>
-          <FaCertificate size={50} className="feature-icon" />
+          <FaCertificate size={50} className="feature-icon" aria-label="Earn Certifications" />
           <h3>Earn Certifications</h3>
           <p>Get industry-recognized certificates to boost your career.</p>
         </FeatureCard>
         <FeatureCard>
-          <FaUsers size={50} className="feature-icon" />
+          <FaUsers size={50} className="feature-icon" aria-label="Join a Community" />
           <h3>Join a Community</h3>
           <p>Engage with learners and grow together.</p>
         </FeatureCard>
@@ -50,15 +50,21 @@ export default Home;
 
 // Styled Components
 const Container = styled.div`
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 80px; /* ✅ Adjust for Navbar height */
+  padding-bottom: 60px; /* ✅ Adjust for Footer height */
   font-family: "Arial", sans-serif;
 `;
 
 // Hero Section
-const HeroSection = styled.div`
+const HeroSection = styled.section`
   background: #001f3f;
   color: white;
   padding: 80px 20px;
+  width: 100%;
   text-align: center;
 
   h1 {
@@ -83,13 +89,14 @@ const HeroSection = styled.div`
 `;
 
 // Features Section
-const Features = styled.div`
+const Features = styled.section`
   display: flex;
   justify-content: center;
   gap: 30px;
   padding: 60px 20px;
   background: #f4f4f4;
-  flex-wrap: wrap; /* ✅ Responsive for smaller screens */
+  flex-wrap: wrap;
+  width: 100%;
 `;
 
 const FeatureCard = styled.div`
@@ -129,11 +136,12 @@ const FeatureCard = styled.div`
 `;
 
 // CTA Section
-const CTASection = styled.div`
+const CTASection = styled.section`
   background: #007bff;
   color: white;
   padding: 60px 20px;
   text-align: center;
+  width: 100%;
 
   h2 {
     font-size: 2.2rem;

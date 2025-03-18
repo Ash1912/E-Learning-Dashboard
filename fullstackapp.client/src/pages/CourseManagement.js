@@ -1,20 +1,21 @@
-import { useEffect, useState, useCallback } from 'react';
-import { useParams, useNavigate } from 'react-router-dom'; // ✅ Added useNavigate for redirection
-import { getCourseById } from '../services/courseService';
-import { toggleEnrollment, getUserEnrollments, updateProgress } from '../services/enrollmentService';
-import { getQuizzes, submitQuiz } from '../services/quizService';
-import { useSelector } from 'react-redux';
-import { Card, Button, Alert, Container } from 'react-bootstrap';
-import '../styles/CourseManagement.css';
+import { useEffect, useState, useCallback } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { getCourseById } from "../services/courseService";
+import { toggleEnrollment, getUserEnrollments, updateProgress } from "../services/enrollmentService";
+import { getQuizzes, submitQuiz } from "../services/quizService";
+import { useSelector } from "react-redux";
+import { Card, Button, Alert, Container, ProgressBar } from "react-bootstrap"; // ✅ Import ProgressBar
+import "../styles/CourseManagement.css";
 
 const CourseManagement = () => {
     const { courseId } = useParams();
-    const navigate = useNavigate(); // ✅ Initialize navigation hook
-    const user = useSelector(state => state.auth.user);
+    const navigate = useNavigate();
+    const user = useSelector((state) => state.auth.user);
     const [course, setCourse] = useState(null);
     const [enrolled, setEnrolled] = useState(false);
     const [quizzes, setQuizzes] = useState([]);
     const [submittedQuizzes, setSubmittedQuizzes] = useState(new Set());
+    const [progress, setProgress] = useState(0); // ✅ Track Progress
     const [error, setError] = useState(null);
 
     // ✅ Load Course & Enrollment Status
@@ -24,7 +25,12 @@ const CourseManagement = () => {
             setCourse(courseData);
 
             const enrollments = await getUserEnrollments(user.id);
-            setEnrolled(enrollments.some(enroll => enroll.courseId === Number(courseId)));
+            const enrollment = enrollments.find((enroll) => enroll.courseId === Number(courseId));
+
+            setEnrolled(!!enrollment);
+            if (enrollment) {
+                setProgress(enrollment.progress); // ✅ Set initial progress
+            }
         } catch (err) {
             setError("Failed to load course details.");
         }
@@ -52,13 +58,17 @@ const CourseManagement = () => {
     const handleToggleEnrollment = async () => {
         try {
             await toggleEnrollment(user.id, courseId);
-            setEnrolled(prev => !prev);
+            setEnrolled((prev) => !prev);
+            setProgress(0); // ✅ Reset progress on unenroll
 
             if (enrolled) {
-                alert("You have been unenrolled from this course.");
-                navigate("/dashboard"); // ✅ Redirect to Dashboard after Unenroll
+                setTimeout(() => {
+                    alert("You have been unenrolled from this course.");
+                    navigate("/dashboard");
+                }, 100);
             } else {
-                alert("Enrollment successful! Start learning now.");
+                alert("Enrollment successful! Redirecting to course...");
+                navigate(`/course-management/${courseId}`);
             }
         } catch (err) {
             setError("Failed to update enrollment.");
@@ -76,19 +86,23 @@ const CourseManagement = () => {
             const result = await submitQuiz(quizId, user.id, answer);
             alert(result.message);
 
-            setSubmittedQuizzes(prev => {
+            setSubmittedQuizzes((prev) => {
                 const updatedQuizzes = new Set(prev);
                 updatedQuizzes.add(quizId);
 
-                // ✅ Ensure progress updates only after all quizzes are completed
-                if (updatedQuizzes.size === quizzes.length) {
-                    updateProgress(user.id, courseId, 100)
-                        .then(() => alert("Course progress updated to 100%!"))
-                        .catch((err) => {
-                            console.error("Progress update error:", err);
-                            setError("Failed to update progress.");
-                        });
-                }
+                // ✅ Calculate progress dynamically
+                const newProgress = Math.round((updatedQuizzes.size / quizzes.length) * 100);
+                setProgress(newProgress);
+
+                console.log(`🚀 Updating progress: ${newProgress}% (${updatedQuizzes.size}/${quizzes.length} quizzes completed)`);
+
+                // ✅ Update progress in the backend
+                updateProgress(user.id, courseId, newProgress)
+                    .then(() => console.log("✅ Progress updated successfully!"))
+                    .catch((err) => {
+                        console.error("Progress update error:", err);
+                        setError("Failed to update progress.");
+                    });
 
                 return updatedQuizzes;
             });
@@ -111,9 +125,9 @@ const CourseManagement = () => {
                         {/* ✅ YouTube Video Player */}
                         {course.videoUrl ? (
                             <div className="video-container">
-                                <iframe 
+                                <iframe
                                     className="responsive-video"
-                                    src={course.videoUrl.replace("watch?v=", "embed/")} 
+                                    src={course.videoUrl.replace("watch?v=", "embed/")}
                                     title="Course Video"
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -124,9 +138,17 @@ const CourseManagement = () => {
                             <p>No video available for this course.</p>
                         )}
 
-                        <Button 
-                            variant={enrolled ? "danger" : "primary"} 
-                            onClick={handleToggleEnrollment} 
+                        {/* ✅ Progress Bar */}
+                        {enrolled && (
+                            <div className="progress-container">
+                                <p className="progress-label">Course Progress: {progress}%</p>
+                                <ProgressBar now={progress} label={`${progress}%`} animated striped variant="success" />
+                            </div>
+                        )}
+
+                        <Button
+                            variant={enrolled ? "danger" : "primary"}
+                            onClick={handleToggleEnrollment}
                         >
                             {enrolled ? "Unenroll & Go to Dashboard" : "Enroll & Start Learning"}
                         </Button>
@@ -139,15 +161,15 @@ const CourseManagement = () => {
             {/* ✅ Quiz Section */}
             <h3 className="quiz-title">Quiz</h3>
             {quizzes.length > 0 ? (
-                quizzes.map(quiz => (
+                quizzes.map((quiz) => (
                     <Card key={quiz.id} className="quiz-card">
                         <Card.Body>
                             <Card.Title>{quiz.question}</Card.Title>
                             <div className="quiz-options">
-                                {[quiz.optionA, quiz.optionB, quiz.optionC, quiz.optionD].map(option => (
-                                    <Button 
-                                        key={option} 
-                                        variant={submittedQuizzes.has(quiz.id) ? "secondary" : "outline-primary"} 
+                                {[quiz.optionA, quiz.optionB, quiz.optionC, quiz.optionD].map((option) => (
+                                    <Button
+                                        key={option}
+                                        variant={submittedQuizzes.has(quiz.id) ? "secondary" : "outline-primary"}
                                         onClick={() => handleSubmitQuiz(quiz.id, option)}
                                         disabled={submittedQuizzes.has(quiz.id)}
                                         className="quiz-option"

@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 // ✅ Safely retrieve and parse user data from localStorage
 const getStoredUser = () => {
     try {
-        return JSON.parse(localStorage.getItem("user")) || null;
+        const user = localStorage.getItem("user");
+        return user ? JSON.parse(user) : null;
     } catch {
         return null; // Prevents errors if localStorage data is corrupted
     }
@@ -27,6 +28,9 @@ const authSlice = createSlice({
             if (user) {
                 localStorage.setItem("user", JSON.stringify(user));
                 localStorage.setItem("token", token);
+            } else {
+                localStorage.removeItem("user");
+                localStorage.removeItem("token");
             }
         },
 

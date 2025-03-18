@@ -2,8 +2,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../store/authSlice";
 import { Navbar, Nav, Button, Container } from "react-bootstrap";
-import { FaSignInAlt, FaUserPlus, FaUserCircle } from "react-icons/fa"; // ✅ Added Profile Icon
-import "../styles/Navbar.css"; // ✅ Import CSS file for styling
+import { FaSignInAlt, FaUserPlus, FaUserCircle, FaUserShield, FaHome, FaBookOpen, FaUserCog } from "react-icons/fa"; // ✅ Added Profile Icon
+import "../styles/Navbar.css"; // ✅ Import CSS for styling
 
 const NavigationBar = () => {
     const user = useSelector((state) => state.auth.user);
@@ -15,30 +15,57 @@ const NavigationBar = () => {
         navigate("/");
     };
 
+    // ✅ Redirect user to their respective Dashboard
+    const handleHomeRedirect = () => {
+        if (user) {
+            navigate("/dashboard"); // ✅ Both Students & Admins go to Dashboard
+        } else {
+            navigate("/"); // ✅ Redirect to homepage if not logged in
+        }
+    };
+
     return (
         <Navbar bg="dark" variant="dark" expand="lg" className="fixed-top navbar-custom">
             <Container>
+                {/* ✅ Brand Logo */}
                 <Navbar.Brand as={Link} to="/" className="brand-logo">
-                    E-Learning
+                    <FaBookOpen className="brand-logo-icon" /> E-Learning
                 </Navbar.Brand>
+
                 <Navbar.Toggle aria-controls="navbar-nav" />
                 <Navbar.Collapse id="navbar-nav">
-                    {/* <Nav className="me-auto">
-                        <Nav.Link as={Link} to="/courses" className="nav-item">
-                            Courses
-                        </Nav.Link>
-                        {user && (
-                            <Nav.Link as={Link} to="/enrollments" className="nav-item">
-                                My Courses
-                            </Nav.Link>
+                    <Nav className="me-auto">
+                        {/* ✅ Display Student & Admin Panel */}
+                        {user?.role === "Student" && <span className="nav-item student-panel">🎓 Student Panel</span>}
+                        {user?.role === "Admin" && (
+                            <span className="nav-item admin-panel">
+                                <FaUserShield className="nav-icon" /> Admin Panel
+                            </span>
                         )}
-                    </Nav> */}
+                    </Nav>
                     <Nav className="ms-auto">
+                        {/* ✅ Home Button */}
+                        <Button variant="outline-light" className="nav-home-btn" onClick={handleHomeRedirect}>
+                            <FaHome className="nav-icon" /> Home
+                        </Button>
+
+                        {/* ✅ Show Profile Button for Admin Users */}
+                        {user?.role === "Admin" && (
+                            <Button
+                                variant="outline-light"
+                                className="nav-profile-btn"
+                                onClick={() => navigate("/profile")}
+                            >
+                                <FaUserCog className="nav-icon" /> Profile
+                            </Button>
+                        )}
+
+                        {/* ✅ User Auth Buttons */}
                         {user ? (
                             <>
-                                <Nav.Link as={Link} to="/profile" className="welcome-text">
+                                <span className="welcome-text">
                                     <FaUserCircle className="nav-icon" /> {user.name}
-                                </Nav.Link>
+                                </span>
                                 <Button className="logout-btn" onClick={handleLogout}>
                                     Logout
                                 </Button>

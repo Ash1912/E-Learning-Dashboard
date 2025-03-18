@@ -3,6 +3,9 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* ✅ Quiz Title */
@@ -11,10 +14,12 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
+    color: #343a40;
 }
 
 /* ✅ Quiz Card */
 .quiz-card {
+    width: 100%;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -30,9 +35,11 @@
 
 /* ✅ Quiz Question */
 .quiz-question {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 15px;
+    text-align: center;
+    color: #212529;
 }
 
 /* ✅ Quiz Options */
@@ -40,20 +47,39 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
 }
 
 .quiz-option {
     width: 100%;
     font-size: 1.1rem;
-    padding: 10px;
+    padding: 12px;
     font-weight: bold;
-    transition: 0.3s;
+    transition: all 0.3s;
     border-radius: 8px;
+    border: 2px solid #007bff;
+    background: white;
+    cursor: pointer;
+    text-align: center;
 }
 
 .quiz-option:hover {
     background-color: #007bff;
     color: white;
+    transform: scale(1.05);
+}
+
+/* ✅ Selected Option */
+.quiz-option.selected {
+    background-color: #28a745;
+    color: white;
+    border-color: #218838;
+}
+
+/* ✅ Disabled Option */
+.quiz-option.disabled {
+    opacity: 0.6;
+    pointer-events: none;
 }
 
 /* ✅ Feedback Message */
@@ -61,14 +87,48 @@
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* ✅ Correct Answer */
+.quiz-feedback.correct {
+    color: #28a745;
+    background: rgba(40, 167, 69, 0.1);
+}
+
+/* ✅ Incorrect Answer */
+.quiz-feedback.incorrect {
     color: #dc3545;
+    background: rgba(220, 53, 69, 0.1);
+}
+
+/* ✅ Next Button */
+.quiz-next-btn {
+    width: 100%;
+    max-width: 200px;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.quiz-next-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 /* ✅ Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .quiz-container {
-        padding: 10px;
+        max-width: 90%;
+        padding: 15px;
     }
 
     .quiz-title {
@@ -76,6 +136,63 @@
     }
 
     .quiz-question {
+        font-size: 1.3rem;
+    }
+
+    .quiz-option {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .quiz-next-btn {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+/* ✅ Mobile Screens */
+@media (max-width: 768px) {
+    .quiz-container {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .quiz-title {
+        font-size: 1.6rem;
+    }
+
+    .quiz-question {
         font-size: 1.2rem;
+    }
+
+    .quiz-option {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+
+    .quiz-next-btn {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+}
+
+/* ✅ Smallest Screens */
+@media (max-width: 480px) {
+    .quiz-title {
+        font-size: 1.5rem;
+    }
+
+    .quiz-question {
+        font-size: 1.1rem;
+    }
+
+    .quiz-option {
+        font-size: 0.9rem;
+        padding: 7px;
+    }
+
+    .quiz-next-btn {
+        font-size: 0.9rem;
+        padding: 8px;
     }
 }

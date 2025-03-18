@@ -1,0 +1,14 @@
+/* ✅ Adjusts container spacing to reduce gap between navbar & login card */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* ✅ Ensure it takes full height */
+    padding-top: 80px; /* ✅ Adjust navbar spacing */
+}
+
+/* ✅ Login card styling */
+.login-card {
+    width: 100%;
+    max-width: 450px;
+}

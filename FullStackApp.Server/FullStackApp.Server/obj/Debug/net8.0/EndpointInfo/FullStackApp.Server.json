@@ -362,30 +362,11 @@
         }
       }
     },
-    "/api/User/register": {
-      "post": {
+    "/api/User/all": {
+      "get": {
         "tags": [
           "User"
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RegisterDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RegisterDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/RegisterDTO"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "OK"
@@ -451,6 +432,12 @@
   "components": {
     "schemas": {
       "Course": {
+        "required": [
+          "description",
+          "imageUrl",
+          "title",
+          "videoUrl"
+        ],
         "type": "object",
         "properties": {
           "id": {
@@ -458,24 +445,34 @@
             "format": "int32"
           },
           "title": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
           },
           "description": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 1000,
+            "minLength": 1,
+            "type": "string"
           },
           "videoUrl": {
+            "minLength": 1,
             "type": "string",
-            "nullable": true
+            "format": "uri"
+          },
+          "imageUrl": {
+            "minLength": 1,
+            "type": "string",
+            "format": "uri"
           }
         },
         "additionalProperties": false
       },
       "Enrollment": {
         "required": [
+          "courseId",
           "progress",
-          "status"
+          "status",
+          "userId"
         ],
         "type": "object",
         "properties": {
@@ -493,9 +490,12 @@
           },
           "status": {
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "default": "Unenrolled"
           },
           "progress": {
+            "maximum": 100,
+            "minimum": 0,
             "type": "integer",
             "format": "int32"
           }
@@ -568,6 +568,11 @@
         "additionalProperties": false
       },
       "UpdateUserDTO": {
+        "required": [
+          "email",
+          "id",
+          "name"
+        ],
         "type": "object",
         "properties": {
           "id": {
@@ -575,14 +580,18 @@
             "format": "int32"
           },
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 2,
+            "type": "string"
           },
           "email": {
+            "minLength": 1,
             "type": "string",
-            "nullable": true
+            "format": "email"
           },
           "password": {
+            "maxLength": 100,
+            "minLength": 6,
             "type": "string",
             "nullable": true
           }

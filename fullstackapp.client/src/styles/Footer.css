@@ -1,8 +1,9 @@
 /* ✅ Footer Styling */
 .footer {
-    position: relative; /* Ensures it doesn't overlap content */
+    position: fixed; /* ✅ Fixes it to the bottom of the viewport */
+    bottom: 0;
     width: 100%;
-    padding: 15px 0;
+    padding: 8px 0; /* 🔹 Reduced padding for a thinner footer */
     background-color: #212529;
     box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -10,7 +11,7 @@
 
 /* ✅ Footer Text */
 .footer-text {
-    font-size: 14px;
+    font-size: 12px; /* 🔹 Reduced font size for a thinner appearance */
     color: #f8f9fa;
     margin: 0;
     transition: color 0.3s ease-in-out;
@@ -20,6 +21,22 @@
 .footer-text:hover {
     color: #ffcc00;
     cursor: pointer;
+}
+
+/* ✅ Social Media Icons */
+.social-icons {
+    margin-top: 5px; /* 🔹 Reduced margin to make footer thinner */
+}
+
+.social-icons a {
+    color: #f8f9fa;
+    margin: 0 8px;
+    font-size: 16px; /* 🔹 Reduced icon size */
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #ffcc00;
 }
 
 /* ✅ Ensure Footer Stays at Bottom */
@@ -35,16 +52,21 @@ html, body {
 }
 
 .main-content {
-    flex: 1;
+    flex: 1; /* ✅ Pushes the footer down */
 }
 
 /* ✅ Responsive Fixes */
 @media (max-width: 768px) {
     .footer {
-        padding: 12px;
+        padding: 6px 0; /* 🔹 Even thinner on smaller screens */
     }
 
     .footer-text {
-        font-size: 13px;
+        font-size: 11px;
+    }
+
+    .social-icons a {
+        font-size: 14px;
+        margin: 0 6px;
     }
 }

@@ -1,49 +1,52 @@
 import axios from "axios";
+import { logout } from "./authService"; // ✅ Auto logout if unauthorized
 
 const API_URL = "https://localhost:7209/api/User";
 
-// ✅ Helper function to attach authentication headers (if token exists)
+// ✅ Attach authentication headers
 const getAuthHeaders = () => {
     const token = localStorage.getItem("token");
-    const headers = { "Content-Type": "application/json" };
-
-    if (token) headers["Authorization"] = `Bearer ${token}`;
-
-    return { headers };
+    return token
+        ? { "Content-Type": "application/json", Authorization: `Bearer ${token}` }
+        : { "Content-Type": "application/json" };
 };
 
-// ✅ Fetch user details (without exposing password)
-export const getUser = async (userId) => {
+// ✅ Centralized API Request Handler
+const requestHandler = async (method, url, data = null, auth = false) => {
     try {
-        const response = await axios.get(`${API_URL}/${userId}`, getAuthHeaders());
-        return response.data; // Returns { id, name, email }
+        const config = auth ? { headers: getAuthHeaders() } : {};
+        const response = await axios({ method, url, data, ...config });
+        return response.data;
     } catch (error) {
-        console.error("Error fetching user:", error.response?.data || error.message);
-        throw new Error(error.response?.data?.message || "Failed to fetch user");
+        if (error.response?.status === 401) {
+            logout();
+            window.location.href = "/login"; // Redirect to login
+        }
+
+        // ✅ Log validation errors
+        if (error.response?.status === 400 && error.response?.data?.errors) {
+            console.error("Validation Errors:", error.response.data.errors);
+        }
+
+        console.error(`API Error (${method.toUpperCase()} ${url}):`, error.response?.data || error.message);
+        throw new Error(error.response?.data?.message || "An error occurred while processing the request.");
     }
 };
 
-// ✅ Update user profile (Includes password only if provided)
+// ✅ Fetch user details
+export const getUser = (userId) => requestHandler("get", `${API_URL}/${userId}`, null, true);
+
+// ✅ Fetch all users (Admin Only)
+export const getAllUsers = () => requestHandler("get", `${API_URL}/all`, null, true);
+
+// ✅ Update user profile
 export const updateUser = async (userData) => {
-    try {
-        // ✅ Ensure user ID is included (Backend requires it)
-        if (!userData.id) throw new Error("User ID is required for updates.");
+    if (!userData.id) throw new Error("User ID is required for updates.");
 
-        const response = await axios.put(`${API_URL}/update`, userData, getAuthHeaders());
-        return response.data; // Returns { message: "Profile updated successfully!" }
-    } catch (error) {
-        console.error("Error updating user:", error.response?.data || error.message);
-        throw new Error(error.response?.data?.message || "Failed to update user");
-    }
+    // ✅ Prevent sending empty password field
+    const updateData = { ...userData };
+    if (!updateData.password?.trim()) delete updateData.password; // ✅ Fix: Removes empty password field
+
+    return requestHandler("put", `${API_URL}/update`, updateData, true);
 };
 
-// ✅ Register a new user
-export const registerUser = async (userData) => {
-    try {
-        const response = await axios.post(`${API_URL}/register`, userData, getAuthHeaders());
-        return response.data; // Returns { message: "User registered successfully!" }
-    } catch (error) {
-        console.error("Error registering user:", error.response?.data || error.message);
-        throw new Error(error.response?.data?.message || "Failed to register user");
-    }
-};

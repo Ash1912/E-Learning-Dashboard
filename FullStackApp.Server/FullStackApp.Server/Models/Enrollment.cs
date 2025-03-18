@@ -1,18 +1,24 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace FullStackApp.Server.Models
 {
     public class Enrollment
     {
         public int Id { get; set; }
+        [Required]
         public int UserId { get; set; }
+
+        [Required]
         public int CourseId { get; set; }
-        
+
         [Required]
-        public string Status { get; set; } = "Unenrolled"; // Default status
-        
+        [DefaultValue("Unenrolled")] // ✅ Default status
+        public string Status { get; set; }
+
         [Required]
-        public int Progress { get; set; } = 0; // Default progress
+        [Range(0, 100)] // ✅ Ensures valid progress range
+        public int Progress { get; set; } = 0;
 
     }
 }

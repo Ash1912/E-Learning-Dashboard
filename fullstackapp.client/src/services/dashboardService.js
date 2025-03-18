@@ -21,18 +21,22 @@ export const getStudentDashboard = async (userId) => {
 
         if (!enrollments.length) return [];
 
-        // ✅ Fetch full course details for enrolled courses
-        const coursePromises = enrollments.map((enrollment) =>
+        // ✅ Fetch full course details for enrolled courses (Handle failed API calls gracefully)
+        const courseRequests = enrollments.map((enrollment) =>
             axios.get(`${API_URL}/Course/${enrollment.courseId}`, getAuthHeaders())
         );
 
-        const courseResponses = await Promise.all(coursePromises);
-        const courses = courseResponses.map((res) => res.data);
+        const courseResponses = await Promise.allSettled(courseRequests);
+
+        // ✅ Extract successful responses only
+        const courses = courseResponses
+            .filter((res) => res.status === "fulfilled")
+            .map((res) => res.value.data);
 
         console.log("Processed Courses:", courses);
         return courses;
     } catch (error) {
-        console.error("Error loading student dashboard:", error.response?.data || error.message);
+        console.error("❌ Error loading student dashboard:", error.response?.data || error.message);
         throw new Error(error.response?.data?.message || "Failed to load student dashboard");
     }
 };
@@ -44,7 +48,7 @@ export const getAdminDashboard = async () => {
         const response = await axios.get(`${API_URL}/Course`, getAuthHeaders());
         return response.data; // Returns all courses
     } catch (error) {
-        console.error("Error loading admin dashboard:", error.response?.data || error.message);
+        console.error("❌ Error loading admin dashboard:", error.response?.data || error.message);
         throw new Error(error.response?.data?.message || "Failed to load admin dashboard");
     }
 };

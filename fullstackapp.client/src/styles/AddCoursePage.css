@@ -1,0 +1,131 @@
+/* ✅ Prevent Overlapping with Navbar */
+.add-course-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 100px 20px 40px; /* ✅ Padding at top to prevent navbar overlap */
+}
+
+/* ✅ Card Styling */
+.add-course-card {
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ Form Styling */
+.add-course-form input,
+.add-course-form textarea {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* ✅ Adjust Textarea Height */
+.add-course-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* ✅ Button Styling */
+.add-course-btn {
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+
+.add-course-btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* ✅ Prevent Footer Overlap */
+.add-course-footer-space {
+    height: 60px;
+}
+
+/* ✅ Responsive Styles */
+
+/* Mobile Responsive (max-width: 768px) */
+@media (max-width: 768px) {
+    .add-course-container {
+        padding: 90px 15px 40px;
+    }
+
+    /* Card Styling */
+    .add-course-card {
+        padding: 20px;
+    }
+
+    /* Form Styling */
+    .add-course-form input,
+    .add-course-form textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Button Styling */
+    .add-course-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Tablet Responsive (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .add-course-container {
+        max-width: 80%; /* Make container wider on tablets */
+    }
+
+    /* Card Styling */
+    .add-course-card {
+        padding: 20px;
+    }
+
+    /* Form Styling */
+    .add-course-form input,
+    .add-course-form textarea {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    /* Button Styling */
+    .add-course-btn {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
+/* Desktop Responsive (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .add-course-container {
+        max-width: 600px; /* Keep original max-width for larger screens */
+    }
+
+    /* Card Styling */
+    .add-course-card {
+        padding: 25px;
+    }
+
+    /* Form Styling */
+    .add-course-form input,
+    .add-course-form textarea {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* Button Styling */
+    .add-course-btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+}

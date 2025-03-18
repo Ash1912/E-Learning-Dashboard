@@ -1,14 +1,14 @@
-/* ✅ General Styling */
+/* ✅ Adjust padding to prevent navbar overlap */
 .course-container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 90px 20px 20px;
 }
 
 /* ✅ Video Container */
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* ✅ Maintain 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     max-width: 100%;
@@ -71,30 +71,28 @@
 }
 
 .quiz-option {
-    width: 100%;
+    flex-grow: 1;
     font-size: 1.1rem;
     padding: 10px;
     font-weight: bold;
-    transition: 0.3s;
     border-radius: 8px;
 }
 
-.quiz-option:hover {
-    background-color: #007bff;
-    color: white;
+/* ✅ Progress Bar Styling */
+.progress-container {
+    margin: 20px 0;
+    text-align: center;
 }
+
+.progress-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
 
 /* ✅ Mobile Responsive */
 @media (max-width: 768px) {
     .course-container {
-        padding: 10px;
-    }
-
-    .course-title {
-        font-size: 1.8rem;
-    }
-
-    .quiz-title {
-        font-size: 1.2rem;
+        padding: 80px 10px 20px;
     }
 }

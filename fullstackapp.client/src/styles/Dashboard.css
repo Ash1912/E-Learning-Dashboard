@@ -1,12 +1,15 @@
-/* Dashboard Container */
+/* ✅ Dashboard Container */
 .dashboard-container {
     max-width: 1200px;
     margin: auto;
-    padding: 20px;
-    animation: fadeIn 0.5s ease-in-out;
+    padding: 10px 20px 80px; /* ✅ Prevent navbar overlap */
+    animation: fadeIn 0.4s ease-in-out;
+    min-height: 100vh; /* ✅ Ensures enough space for the content */
+    display: flex;
+    flex-direction: column;
 }
 
-/* Heading Styling */
+/* ✅ Heading Styling */
 .dashboard-title {
     text-align: center;
     font-size: 32px;
@@ -24,30 +27,36 @@
     margin-bottom: 30px;
 }
 
-/* Course Cards */
+/* ✅ Course Cards Container */
 .dashboard-courses {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 40px;
+    gap: 20px;
+    flex-grow: 1; /* ✅ Pushes content upward */
 }
 
-/* Individual Course Card */
+/* ✅ Individual Course Card (Fixed Equal Height) */
 .dashboard-card {
-    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 15px;
+    width: 100%;
+    max-width: 350px; /* ✅ Set a max width for consistent size */
+    min-height: 300px; /* ✅ Ensures all cards are the same height */
+    display: flex;
+    flex-direction: column;
 }
 
+/* ✅ Hover Effect */
 .dashboard-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Card Title */
+/* ✅ Card Title */
 .card-title {
     font-size: 22px;
     font-weight: bold;
@@ -55,17 +64,30 @@
     margin-bottom: 10px;
 }
 
-/* Card Text */
+/* ✅ Card Text (Prevent Uneven Height Issues) */
 .card-text {
     font-size: 16px;
     color: #6c757d;
-    margin-bottom: 20px;
+    margin-bottom: auto; /* ✅ Pushes buttons to bottom */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* ✅ Show max 3 lines, then "..." */
+    -webkit-box-orient: vertical;
 }
 
-/* Button Styles */
+/* ✅ Button Container */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; /* ✅ Ensures buttons stay aligned */
+}
+
+/* ✅ Button Styles */
 .dashboard-button {
     font-weight: bold;
-    padding: 12px;
+    padding: 10px;
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
     width: 100%;
@@ -76,51 +98,12 @@
     transform: scale(1.05);
 }
 
-/* Primary Button */
-.dashboard-button.btn-primary {
-    background: #007bff;
-    border: none;
-}
-
-.dashboard-button.btn-primary:hover {
-    background: #0056b3;
-}
-
-/* Danger Button */
-.dashboard-button.btn-danger {
-    background: #dc3545;
-    border: none;
-}
-
-.dashboard-button.btn-danger:hover {
-    background: #b02a37;
-}
-
-/* Warning Button */
-.dashboard-button.btn-warning {
-    background: #ffc107;
-    color: #212529;
-    border: none;
-}
-
-.dashboard-button.btn-warning:hover {
-    background: #e0a800;
-}
-
-/* No Courses Message */
-.no-courses {
-    text-align: center;
-    font-size: 18px;
-    color: #6c757d;
-    margin-top: 20px;
-}
-
-/* Add Course Button */
+/* ✅ Add Course Button */
 .add-course-button {
     display: block;
-    margin: 30px auto;
+    margin: 30px auto 40px;
     padding: 14px 22px;
-    background: linear-gradient(135deg, #28a745, #218838);
+    background: #28a745;
     color: white;
     font-size: 18px;
     border: none;
@@ -131,51 +114,51 @@
 }
 
 .add-course-button:hover {
-    background: linear-gradient(135deg, #218838, #1e7e34);
+    background: #218838;
     transform: scale(1.08);
 }
 
-/* Loading Spinner */
+/* ✅ Loading Spinner */
 .loading-spinner {
     text-align: center;
     padding: 20px;
 }
 
-.loading-spinner p {
-    font-size: 16px;
-    color: #6c757d;
-    margin-top: 10px;
+/* ✅ "Go to Course" Button (Yellow Color) */
+.go-to-course-btn {
+    background-color: #ffc107;
+    border: none;
+    color: black;
+    font-weight: bold;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .dashboard-courses {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
+.go-to-course-btn:hover {
+    background-color: #e0a800;
+    color: black;
+}
 
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
     .dashboard-title {
         font-size: 28px;
     }
 
-    .dashboard-subtitle {
-        font-size: 16px;
+    .dashboard-courses {
+        flex-direction: column;
+        align-items: center;
     }
 
     .dashboard-card {
-        padding: 12px;
+        width: 90%; /* ✅ Responsive card width */
     }
-
-    .dashboard-button {
-        padding: 10px;
-    }
-
     .add-course-button {
         font-size: 16px;
         padding: 12px;
     }
 }
 
-/* Animations */
+/* ✅ Fade In Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;

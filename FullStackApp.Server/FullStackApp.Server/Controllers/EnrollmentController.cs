@@ -27,14 +27,20 @@ namespace FullStackApp.Server.Controllers
         {
             try
             {
+                Console.WriteLine($"🔍 Received Enrollment Request: UserId={enrollment.UserId}, CourseId={enrollment.CourseId}");
+
+                if (enrollment.UserId <= 0 || enrollment.CourseId <= 0)
+                {
+                    return BadRequest(new { message = "Invalid UserId or CourseId." });
+                }
                 var existingEnrollment = await _context.Enrollments
-                    .FirstOrDefaultAsync(e => e.UserId == enrollment.UserId && e.CourseId == enrollment.CourseId);
+                            .FirstOrDefaultAsync(e => e.UserId == enrollment.UserId && e.CourseId == enrollment.CourseId);
 
                 if (existingEnrollment != null)
                 {
                     _context.Enrollments.Remove(existingEnrollment);
                     await _context.SaveChangesAsync();
-                    return Ok(new { message = "Unenrolled from the course successfully." });
+                    return Ok(new { message = "Unenrolled successfully, progress reset to 0." });
                 }
 
                 _context.Enrollments.Add(new Enrollment
@@ -50,6 +56,7 @@ namespace FullStackApp.Server.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"❌ Error Processing Enrollment: {ex.Message}");
                 return StatusCode(500, new { message = "Error processing enrollment", error = ex.Message });
             }
         }
@@ -113,6 +120,6 @@ namespace FullStackApp.Server.Controllers
             {
                 return StatusCode(500, new { message = "Error updating progress", error = ex.Message });
             }
-        }
+    }
     }
 }
