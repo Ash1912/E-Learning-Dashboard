@@ -22,7 +22,7 @@ const AddCoursePage = () => {
 
         try {
             await createCourse({ title, description, videoUrl, imageUrl });
-            setSuccess("Course added successfully!");
+            setSuccess("🎉 Course added successfully!");
             setTimeout(() => navigate("/dashboard"), 2000);
         } catch (error) {
             setError(error || "Failed to add course.");
@@ -31,14 +31,14 @@ const AddCoursePage = () => {
 
     return (
         <Container className="add-course-container">
-            <h2 className="text-center">Add New Course</h2>
+            <h2 className="add-course-title">📚 Add a New Course</h2>
             <Card className="add-course-card shadow">
                 {error && <Alert variant="danger">{error}</Alert>}
                 {success && <Alert variant="success">{success}</Alert>}
 
                 <Form onSubmit={handleSubmit} className="add-course-form">
                     <Form.Group className="mb-3">
-                        <Form.Label>Title</Form.Label>
+                        <Form.Label>📌 Course Title</Form.Label>
                         <Form.Control
                             type="text"
                             placeholder="Enter course title"
@@ -49,7 +49,7 @@ const AddCoursePage = () => {
                     </Form.Group>
 
                     <Form.Group className="mb-3">
-                        <Form.Label>Description</Form.Label>
+                        <Form.Label>📖 Description</Form.Label>
                         <Form.Control
                             as="textarea"
                             rows={3}
@@ -61,7 +61,7 @@ const AddCoursePage = () => {
                     </Form.Group>
 
                     <Form.Group className="mb-3">
-                        <Form.Label>Video URL</Form.Label>
+                        <Form.Label>🎥 Video URL</Form.Label>
                         <Form.Control
                             type="text"
                             placeholder="Enter video URL"
@@ -72,18 +72,18 @@ const AddCoursePage = () => {
                     </Form.Group>
 
                     <Form.Group className="mb-3">
-                        <Form.Label>Image URL</Form.Label>
+                        <Form.Label>🖼 Image URL</Form.Label>
                         <Form.Control
                             type="text"
                             placeholder="Enter image URL"
-                            value={videoUrl}
+                            value={imageUrl}
                             onChange={(e) => setImageUrl(e.target.value)}
                             required
                         />
                     </Form.Group>
 
                     <Button variant="success" type="submit" className="add-course-btn">
-                        Add Course
+                        ➕ Add Course
                     </Button>
                 </Form>
             </Card>

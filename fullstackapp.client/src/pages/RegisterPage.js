@@ -47,7 +47,7 @@ const RegisterPage = () => {
             <div className="register-card">
                 <Card className="shadow-lg p-4">
                     <Card.Body>
-                        <h2 className="text-center mb-4">Register</h2>
+                        <h2 className="register-title">Register</h2>
 
                         {success && <Alert variant="success">{success}</Alert>}
                         {error && <Alert variant="danger">{error}</Alert>}
@@ -55,12 +55,12 @@ const RegisterPage = () => {
                         <Form onSubmit={handleRegister}>
                             <Form.Group className="mb-3">
                                 <Form.Label>Name</Form.Label>
-                                <Form.Control type="text" name="name" placeholder="Enter your name" value={formData.name} onChange={handleChange} required />
+                                <Form.Control type="text" className="register-input" name="name" placeholder="Enter your name" value={formData.name} onChange={handleChange} required />
                             </Form.Group>
 
                             <Form.Group className="mb-3">
                                 <Form.Label>Email</Form.Label>
-                                <Form.Control type="email" name="email" placeholder="Enter your email" value={formData.email} onChange={handleChange} required />
+                                <Form.Control type="email" className="register-input" name="email" placeholder="Enter your email" value={formData.email} onChange={handleChange} required />
                             </Form.Group>
 
                             <Form.Group className="mb-3">
@@ -68,28 +68,28 @@ const RegisterPage = () => {
                                 <InputGroup>
                                     <Form.Control
                                         type={showPassword ? "text" : "password"}
+                                        className="register-input"
                                         name="password"
                                         placeholder="Enter your password"
                                         value={formData.password}
                                         onChange={handleChange}
                                         required
                                     />
-                                    <Button variant="outline-secondary" onClick={() => setShowPassword(!showPassword)}>
+                                    <Button variant="outline-secondary" className="password-toggle-btn" onClick={() => setShowPassword(!showPassword)}>
                                         {showPassword ? <FaEyeSlash /> : <FaEye />}
                                     </Button>
                                 </InputGroup>
                             </Form.Group>
 
-                            {/* ✅ Role Selection Dropdown */}
                             <Form.Group className="mb-3">
                                 <Form.Label>Role</Form.Label>
-                                <Form.Select name="role" value={formData.role} onChange={handleChange}>
+                                <Form.Select className="register-role" name="role" value={formData.role} onChange={handleChange}>
                                     <option value="Student">Student</option>
                                     <option value="Admin">Admin</option>
                                 </Form.Select>
                             </Form.Group>
 
-                            <Button variant="success" type="submit" className="w-100" disabled={loading}>
+                            <Button variant="success" type="submit" className="register-btn w-100" disabled={loading}>
                                 {loading ? <Spinner animation="border" size="sm" /> : "Register"}
                             </Button>
                         </Form>

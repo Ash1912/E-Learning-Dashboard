@@ -1,14 +1,152 @@
-/* ✅ Adjusts container spacing to reduce gap between navbar & login card */
+/* ✅ Background Styling with a Split Screen Effect */
 .login-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh; /* ✅ Ensure it takes full height */
-    padding-top: 80px; /* ✅ Adjust navbar spacing */
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #001f3f 50%, #ffffff 50%);
+    padding: 20px;
 }
 
-/* ✅ Login card styling */
+/* ✅ Login Card Styling */
 .login-card {
     width: 100%;
     max-width: 450px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* ✅ Title Styling */
+.login-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #001f3f;
+    margin-bottom: 20px;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ Form Styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ✅ Input Fields */
+.login-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.login-input:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+/* ✅ Password Toggle Button */
+.password-toggle-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.password-toggle-btn:hover {
+    color: #007bff;
+}
+
+/* ✅ Submit Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+    .login-container {
+        background: linear-gradient(to right, #001f3f 40%, #ffffff 60%);
+    }
+
+    .login-title {
+        font-size: 1.8rem;
+    }
+
+    .login-btn {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+/* ✅ Tablet Screens */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        background: #001f3f;
+        padding: 10px;
+    }
+
+    .login-card {
+        max-width: 90%;
+    }
+
+    .login-title {
+        font-size: 1.6rem;
+    }
+
+    .login-btn {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+}
+
+/* ✅ Mobile Screens */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 5px;
+    }
+
+    .login-card {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .login-title {
+        font-size: 1.4rem;
+    }
+
+    .login-input {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
+    .login-btn {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
 }

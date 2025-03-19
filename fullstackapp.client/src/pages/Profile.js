@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { getUser, updateUser, getAllUsers } from "../services/userService";
 import { Card, Form, Button, Alert, Container, Spinner, Table } from "react-bootstrap";
+import "../styles/Profile.css"; // ✅ Import the new CSS file
 
 const Profile = () => {
     const loggedInUser = useSelector((state) => state.auth.user);
@@ -88,104 +89,106 @@ const Profile = () => {
     
 
     return (
-        <Container className="mt-4">
-            <h2 className="text-center mb-4">Profile</h2>
-
-            {loading ? (
-                <div className="text-center">
-                    <Spinner animation="border" variant="primary" />
-                    <p>Loading profile...</p>
-                </div>
-            ) : (
-                <Card className="shadow-sm p-4">
+        <Container className="profile-container">
+            <h2 className="profile-title">👤 Your Profile</h2>
+    
+            {/* ✅ Wrapped in a Fragment */}
+            <>
+                <Card className="profile-card shadow">
                     {error && <Alert variant="danger">{error}</Alert>}
                     {success && <Alert variant="success">{success}</Alert>}
-
-                    <Form onSubmit={handleUpdate}>
-                        <Form.Group className="mb-3">
-                            <Form.Label>Name</Form.Label>
-                            <Form.Control
-                                type="text"
-                                value={user.name}
-                                disabled={!editMode}
-                                onChange={(e) => setUser({ ...user, name: e.target.value })}
-                            />
-                        </Form.Group>
-
-                        <Form.Group className="mb-3">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control
-                                type="email"
-                                value={user.email}
-                                disabled={!editMode}
-                                onChange={(e) => setUser({ ...user, email: e.target.value })}
-                            />
-                        </Form.Group>
-
-                        {editMode && (
+                    {loading ? (
+                        <div className="loading-spinner">
+                            <Spinner animation="border" variant="primary" />
+                            <p>Loading profile...</p>
+                        </div>
+                    ) : (
+                        <Form onSubmit={handleUpdate}>
                             <Form.Group className="mb-3">
-                                <Form.Label>New Password (Optional)</Form.Label>
+                                <Form.Label>Name</Form.Label>
                                 <Form.Control
-                                    type="password"
-                                    placeholder="Enter new password"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
+                                    type="text"
+                                    value={user.name}
+                                    disabled={!editMode}
+                                    onChange={(e) => setUser({ ...user, name: e.target.value })}
                                 />
                             </Form.Group>
-                        )}
-
-                        <div className="d-flex justify-content-between">
-                            {editMode ? (
-                                <>
-                                    <Button variant="success" type="submit">
-                                        Save Changes
-                                    </Button>
-                                    <Button variant="secondary" onClick={() => setEditMode(false)}>
-                                        Cancel
-                                    </Button>
-                                </>
-                            ) : (
-                                <Button variant="primary" onClick={() => setEditMode(true)}>
-                                    Edit Profile
-                                </Button>
+    
+                            <Form.Group className="mb-3">
+                                <Form.Label>Email</Form.Label>
+                                <Form.Control
+                                    type="email"
+                                    value={user.email}
+                                    disabled={!editMode}
+                                    onChange={(e) => setUser({ ...user, email: e.target.value })}
+                                />
+                            </Form.Group>
+    
+                            {editMode && (
+                                <Form.Group className="mb-3">
+                                    <Form.Label>New Password (Optional)</Form.Label>
+                                    <Form.Control
+                                        type="password"
+                                        placeholder="Enter new password"
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                    />
+                                </Form.Group>
                             )}
-                        </div>
-                    </Form>
-                </Card>
-            )}
-
-            {/* ✅ Admin-Only User Table */}
-            {loggedInUser?.role === "Admin" && (
-                <Card className="shadow-sm p-4 mt-4">
-                    <h4 className="mb-3">All Users</h4>
-                    {users.length === 0 ? (
-                        <p>No users found.</p>
-                    ) : (
-                        <Table striped bordered hover>
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Role</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {users.map((user) => (
-                                    <tr key={user.id}>
-                                        <td>{user.id}</td>
-                                        <td>{user.name}</td>
-                                        <td>{user.email}</td>
-                                        <td>{user.role}</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </Table>
+    
+                            <div className="d-flex justify-content-between">
+                                {editMode ? (
+                                    <>
+                                        <Button variant="success" type="submit">
+                                            Save Changes
+                                        </Button>
+                                        <Button variant="secondary" onClick={() => setEditMode(false)}>
+                                            Cancel
+                                        </Button>
+                                    </>
+                                ) : (
+                                    <Button variant="primary" onClick={() => setEditMode(true)}>
+                                        Edit Profile
+                                    </Button>
+                                )}
+                            </div>
+                        </Form>
                     )}
                 </Card>
-            )}
+    
+                {/* ✅ Wrapped Admin Table in the Fragment */}
+                {loggedInUser?.role === "Admin" && (
+                    <Card className="shadow-sm p-4 mt-4">
+                        <h4 className="mb-3">All Users</h4>
+                        {users.length === 0 ? (
+                            <p>No users found.</p>
+                        ) : (
+                            <Table striped bordered hover>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Role</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {users.map((user) => (
+                                        <tr key={user.id}>
+                                            <td>{user.id}</td>
+                                            <td>{user.name}</td>
+                                            <td>{user.email}</td>
+                                            <td>{user.role}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </Table>
+                        )}
+                    </Card>
+                )}
+            </>
         </Container>
-    );
+    );    
 };
 
 export default Profile;

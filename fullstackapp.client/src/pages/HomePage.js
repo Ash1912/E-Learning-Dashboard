@@ -8,29 +8,31 @@ const Home = () => {
     <Container>
       {/* Hero Section */}
       <HeroSection>
-        <h1>Welcome to E-Learning</h1>
-        <p>Empower yourself with knowledge from industry-leading experts.</p>
-        <Link to="/register">
-          <CTAButton>Get Started</CTAButton>
-        </Link>
+        <HeroContent>
+          <h1>Level Up Your Skills</h1>
+          <p>Join thousands of learners on the journey to mastery.</p>
+          <Link to="/register">
+            <CTAButton>Get Started</CTAButton>
+          </Link>
+        </HeroContent>
       </HeroSection>
 
       {/* Features Section */}
       <Features>
         <FeatureCard>
-          <FaChalkboardTeacher size={50} className="feature-icon" aria-label="Expert Instructors" />
+          <FaChalkboardTeacher size={50} className="feature-icon" />
           <h3>Expert Instructors</h3>
-          <p>Learn from professionals with hands-on experience.</p>
+          <p>Learn from professionals with real-world experience.</p>
         </FeatureCard>
         <FeatureCard>
-          <FaCertificate size={50} className="feature-icon" aria-label="Earn Certifications" />
+          <FaCertificate size={50} className="feature-icon" />
           <h3>Earn Certifications</h3>
-          <p>Get industry-recognized certificates to boost your career.</p>
+          <p>Boost your career with recognized certifications.</p>
         </FeatureCard>
         <FeatureCard>
-          <FaUsers size={50} className="feature-icon" aria-label="Join a Community" />
+          <FaUsers size={50} className="feature-icon" />
           <h3>Join a Community</h3>
-          <p>Engage with learners and grow together.</p>
+          <p>Engage with like-minded learners worldwide.</p>
         </FeatureCard>
       </Features>
 
@@ -53,22 +55,29 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  padding-top: 80px; /* ✅ Adjust for Navbar height */
-  padding-bottom: 60px; /* ✅ Adjust for Footer height */
-  font-family: "Arial", sans-serif;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 `;
 
-// Hero Section
+/* 🎨 Hero Section */
 const HeroSection = styled.section`
-  background: #001f3f;
+  background: linear-gradient(to right, #001f3f, #007bff);
   color: white;
-  padding: 80px 20px;
+  padding: 100px 20px;
   width: 100%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+`;
+
+const HeroContent = styled.div`
+  max-width: 700px;
+  animation: fadeIn 1.5s ease-in-out;
 
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
     margin-bottom: 15px;
   }
@@ -76,6 +85,7 @@ const HeroSection = styled.section`
   p {
     font-size: 1.4rem;
     margin-bottom: 25px;
+    opacity: 0.9;
   }
 
   @media (max-width: 768px) {
@@ -88,13 +98,13 @@ const HeroSection = styled.section`
   }
 `;
 
-// Features Section
+/* 🎨 Features Section */
 const Features = styled.section`
   display: flex;
   justify-content: center;
   gap: 30px;
   padding: 60px 20px;
-  background: #f4f4f4;
+  background: #f8f9fa;
   flex-wrap: wrap;
   width: 100%;
 `;
@@ -102,11 +112,13 @@ const Features = styled.section`
 const FeatureCard = styled.div`
   width: 280px;
   padding: 25px;
-  background: white;
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 12px;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
+  backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  position: relative;
 
   .feature-icon {
     color: #007bff;
@@ -117,39 +129,41 @@ const FeatureCard = styled.div`
   h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #333;
+    color: #222;
   }
 
   p {
     font-size: 1.1rem;
-    color: #555;
+    color: #444;
   }
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    background: white;
 
     .feature-icon {
-      transform: scale(1.1);
+      transform: scale(1.2);
+      color: #ffcc00;
     }
   }
 `;
 
-// CTA Section
+/* 🎨 CTA Section */
 const CTASection = styled.section`
-  background: #007bff;
+  background: linear-gradient(to right, #007bff, #001f3f);
   color: white;
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
   width: 100%;
 
   h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
   }
 
   p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 20px;
   }
 
@@ -163,21 +177,22 @@ const CTASection = styled.section`
   }
 `;
 
-// CTA Button
+/* 🎨 CTA Button */
 const CTAButton = styled.button`
-  background: #ffc107;
+  background: #ffcc00;
   color: #222;
   font-size: 1.2rem;
-  padding: 14px 24px;
+  padding: 14px 26px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
   transition: all 0.3s ease;
-  
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+
   &:hover {
     background: #e0a800;
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   @media (max-width: 768px) {

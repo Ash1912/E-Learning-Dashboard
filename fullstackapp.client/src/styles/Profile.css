@@ -1,0 +1,136 @@
+/* ✅ Profile Container */
+.profile-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #007bff, #6610f2);
+    border-radius: 12px;
+}
+
+/* ✅ Profile Card */
+.profile-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Title Styling */
+.profile-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* ✅ Form Styling */
+.profile-form input {
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+/* ✅ Focus effect on input fields */
+.profile-form input:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* ✅ Button Styling */
+.profile-btn {
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* ✅ Save Changes Button */
+.profile-btn.save {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+.profile-btn.save:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* ✅ Edit Profile Button */
+.profile-btn.edit {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.profile-btn.edit:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* ✅ Cancel Button */
+.profile-btn.cancel {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+.profile-btn.cancel:hover {
+    background-color: #b02a37;
+    transform: scale(1.05);
+}
+
+/* ✅ Admin Table Styling */
+.admin-table {
+    margin-top: 40px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Loading Spinner */
+.loading-spinner {
+    text-align: center;
+    padding: 20px;
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+    .profile-title {
+        font-size: 24px;
+    }
+
+    .profile-card {
+        padding: 25px;
+    }
+
+    .profile-form input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .profile-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

@@ -1,17 +1,17 @@
-/* ✅ Background with a gradient effect */
-.add-course-container {
+/* ✅ Centering the Edit Course Form */
+.edit-course-container {
     max-width: 650px;
     margin: auto;
     padding: 100px 20px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(to right, #007bff, #6610f2); /* ✅ Gradient Background */
+    background: linear-gradient(to right, #007bff, #6610f2);
     border-radius: 12px;
 }
 
 /* ✅ Card Styling */
-.add-course-card {
+.edit-course-card {
     width: 100%;
     max-width: 550px;
     padding: 30px;
@@ -21,14 +21,23 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.add-course-card:hover {
+.edit-course-card:hover {
     transform: translateY(-5px);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* ✅ Title Styling */
+.edit-course-title {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
 /* ✅ Form Styling */
-.add-course-form input,
-.add-course-form textarea {
+.edit-course-form input,
+.edit-course-form textarea {
     padding: 14px;
     font-size: 16px;
     border-radius: 8px;
@@ -38,21 +47,21 @@
 }
 
 /* ✅ Focus effect on input fields */
-.add-course-form input:focus,
-.add-course-form textarea:focus {
+.edit-course-form input:focus,
+.edit-course-form textarea:focus {
     border-color: #007bff;
     box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
     outline: none;
 }
 
 /* ✅ Adjust Textarea Height */
-.add-course-form textarea {
+.edit-course-form textarea {
     height: 120px;
     resize: none;
 }
 
 /* ✅ Button Styling */
-.add-course-btn {
+.edit-course-btn {
     font-weight: bold;
     padding: 14px;
     border-radius: 8px;
@@ -65,46 +74,43 @@
     cursor: pointer;
 }
 
-.add-course-btn:hover {
+.edit-course-btn:hover {
     background: #218838;
     transform: scale(1.05);
 }
 
-/* ✅ Title Styling */
-.add-course-title {
-    font-size: 26px;
-    font-weight: bold;
+/* ✅ Loading Spinner */
+.edit-course-spinner {
     text-align: center;
-    color: #343a40;
-    margin-bottom: 20px;
+    padding: 20px;
 }
 
 /* ✅ Prevent Footer Overlap */
-.add-course-footer-space {
+.edit-course-footer-space {
     height: 60px;
 }
 
 /* ✅ Responsive Styles */
 @media (max-width: 768px) {
-    .add-course-container {
+    .edit-course-container {
         padding: 80px 15px 40px;
     }
 
-    .add-course-card {
+    .edit-course-card {
         padding: 20px;
     }
 
-    .add-course-title {
+    .edit-course-title {
         font-size: 22px;
     }
 
-    .add-course-form input,
-    .add-course-form textarea {
+    .edit-course-form input,
+    .edit-course-form textarea {
         padding: 12px;
         font-size: 14px;
     }
 
-    .add-course-btn {
+    .edit-course-btn {
         padding: 12px;
         font-size: 14px;
     }
@@ -112,25 +118,25 @@
 
 /* ✅ Tablet Responsive (max-width: 1024px) */
 @media (max-width: 1024px) {
-    .add-course-container {
+    .edit-course-container {
         max-width: 80%;
     }
 
-    .add-course-card {
+    .edit-course-card {
         padding: 25px;
     }
 
-    .add-course-title {
+    .edit-course-title {
         font-size: 24px;
     }
 
-    .add-course-form input,
-    .add-course-form textarea {
+    .edit-course-form input,
+    .edit-course-form textarea {
         padding: 14px;
         font-size: 15px;
     }
 
-    .add-course-btn {
+    .edit-course-btn {
         padding: 14px;
         font-size: 15px;
     }

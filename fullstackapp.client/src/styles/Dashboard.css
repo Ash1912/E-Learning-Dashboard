@@ -66,14 +66,12 @@
 
 /* ✅ Card Text (Prevent Uneven Height Issues) */
 .card-text {
-    font-size: 16px;
+    font-size: 14.5px;
     color: #6c757d;
-    margin-bottom: auto; /* ✅ Pushes buttons to bottom */
+    margin-bottom: auto;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* ✅ Show max 3 lines, then "..." */
-    -webkit-box-orient: vertical;
+    white-space: nowrap; /* ✅ Ensures a single line */
 }
 
 /* ✅ Button Container */

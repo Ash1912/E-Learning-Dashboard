@@ -1,31 +1,33 @@
 ﻿USE E_LearningDB;
 
--- ✅ Drop tables if they exist
+-- ✅ Drop tables if they exist (Maintain proper order for foreign key dependencies)
 DROP TABLE IF EXISTS QuizResponses, Quizzes, Enrollments, Courses, Users;
 
--- ✅ Create Users Table
+-- ✅ Create Users Table (Includes Role with default "Student")
 CREATE TABLE Users (
     Id INT IDENTITY(1,1) PRIMARY KEY,
     Name NVARCHAR(100) NOT NULL,
     Email NVARCHAR(255) UNIQUE NOT NULL,
-    PasswordHash NVARCHAR(255) NOT NULL
+    PasswordHash NVARCHAR(255) NOT NULL,
+    Role NVARCHAR(50) DEFAULT 'Student' NOT NULL  -- ✅ Default role is "Student"
 );
 
--- ✅ Create Courses Table
+-- ✅ Create Courses Table (Includes ImageUrl)
 CREATE TABLE Courses (
     Id INT IDENTITY(1,1) PRIMARY KEY,
-    Title NVARCHAR(255) UNIQUE NOT NULL,
-    Description TEXT NOT NULL,
-    VideoUrl NVARCHAR(500) NULL
+    Title NVARCHAR(200) UNIQUE NOT NULL,
+    Description NVARCHAR(1000) NOT NULL,
+    VideoUrl NVARCHAR(500) NOT NULL CHECK (VideoUrl LIKE 'https://%'),  -- ✅ Ensures valid URL
+    ImageUrl NVARCHAR(500) NOT NULL CHECK (ImageUrl LIKE 'https://%')   -- ✅ Ensures valid URL
 );
 
--- ✅ Create Enrollments Table
+-- ✅ Create Enrollments Table (Includes Default Values)
 CREATE TABLE Enrollments (
     Id INT IDENTITY(1,1) PRIMARY KEY,
     UserId INT NOT NULL,
     CourseId INT NOT NULL,
-    Status NVARCHAR(50) DEFAULT 'Unenrolled' NOT NULL,
-    Progress INT DEFAULT 0 NOT NULL,
+    Status NVARCHAR(50) DEFAULT 'Unenrolled' NOT NULL,  -- ✅ Default Status
+    Progress INT DEFAULT 0 NOT NULL CHECK (Progress BETWEEN 0 AND 100),  -- ✅ Ensures valid range (0-100)
     FOREIGN KEY (UserId) REFERENCES Users(Id) ON DELETE CASCADE,
     FOREIGN KEY (CourseId) REFERENCES Courses(Id) ON DELETE CASCADE
 );
@@ -35,11 +37,11 @@ CREATE TABLE Quizzes (
     Id INT IDENTITY(1,1) PRIMARY KEY,
     CourseId INT NOT NULL,
     Question NVARCHAR(500) NOT NULL,
-    OptionA NVARCHAR(255) NOT NULL,
-    OptionB NVARCHAR(255) NOT NULL,
-    OptionC NVARCHAR(255) NOT NULL,
-    OptionD NVARCHAR(255) NOT NULL,
-    CorrectAnswer NVARCHAR(255) NOT NULL,
+    OptionA NVARCHAR(200) NOT NULL,
+    OptionB NVARCHAR(200) NOT NULL,
+    OptionC NVARCHAR(200) NOT NULL,
+    OptionD NVARCHAR(200) NOT NULL,
+    CorrectAnswer NVARCHAR(200) NOT NULL,
     FOREIGN KEY (CourseId) REFERENCES Courses(Id) ON DELETE CASCADE
 );
 
@@ -48,22 +50,22 @@ CREATE TABLE QuizResponses (
     Id INT IDENTITY(1,1) PRIMARY KEY,
     QuizId INT NOT NULL,
     UserId INT NOT NULL,
-    SelectedAnswer NVARCHAR(255) NOT NULL,
+    SelectedAnswer NVARCHAR(200) NOT NULL,
     IsCorrect BIT NOT NULL,
     FOREIGN KEY (QuizId) REFERENCES Quizzes(Id) ON DELETE CASCADE,
     FOREIGN KEY (UserId) REFERENCES Users(Id) ON DELETE CASCADE
 );
 
--- ✅ Insert Sample Users
-INSERT INTO Users (Name, Email, PasswordHash)
+-- ✅ Insert Sample Users (Admin & Students)
+INSERT INTO Users (Name, Email, PasswordHash, Role)
 VALUES 
-('Admin User', 'admin@example.com', 'hashed_admin_password'),
-('John Doe', 'student@example.com', 'john@123'),
-('Jane Smith', 'jane@example.com', 'jane@123'),
-('Alice Brown', 'alice@example.com', 'alice@123'),
-('Bob Wilson', 'bob@example.com', 'bob@123');
+('Admin User', 'admin@example.com', 'hashed_admin_password', 'Admin'),
+('John Doe', 'student@example.com', 'hashed_student_123', 'Student'),
+('Jane Smith', 'jane@example.com', 'hashed_jane_123', 'Student'),
+('Alice Brown', 'alice@example.com', 'hashed_alice_123', 'Student'),
+('Bob Wilson', 'bob@example.com', 'hashed_bob_123', 'Student');
 
--- ✅ Insert Sample Courses
+-- ✅ Insert Sample Courses (With Image URLs)
 INSERT INTO Courses (Title, Description, VideoUrl, ImageUrl)
 VALUES 
 ('React for Beginners', 'Learn the basics of React.', 
@@ -90,14 +92,13 @@ VALUES
  'https://www.youtube.com/watch?v=Gv9_4yMHFhI', 
  'https://i.ytimg.com/vi/Gv9_4yMHFhI/maxresdefault.jpg');
 
-
 -- ✅ Insert Sample Enrollments
 INSERT INTO Enrollments (UserId, CourseId, Status, Progress)
 VALUES 
-(2, 1, 'Unenrolled', 0),  
-(2, 2, 'Unenrolled', 50),  
-(2, 3, 'Enrolled', 100), 
-(2, 4, 'Unenrolled', 10);    
+(2, 1, 'Enrolled', 0),  
+(2, 2, 'Enrolled', 50),  
+(3, 3, 'Enrolled', 100), 
+(4, 4, 'Unenrolled', 10);
 
 -- ✅ Insert Sample Quizzes
 INSERT INTO Quizzes (CourseId, Question, OptionA, OptionB, OptionC, OptionD, CorrectAnswer)
@@ -132,6 +133,9 @@ SELECT * FROM Enrollments;
 SELECT * FROM Quizzes;
 SELECT * FROM QuizResponses;
 
--- ✅ Clear All Quiz Responses
-TRUNCATE TABLE Courses;
-
+-- ✅ Clear All Tables (Use carefully!)
+-- TRUNCATE TABLE QuizResponses;
+-- TRUNCATE TABLE Quizzes;
+-- TRUNCATE TABLE Enrollments;
+-- TRUNCATE TABLE Courses;
+-- TRUNCATE TABLE Users;
