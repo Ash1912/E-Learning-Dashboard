@@ -73,8 +73,8 @@ E-Learning Dashboard is a full-stack web application designed to facilitate onli
 ## 📂 Project Structure
 
 ```bash
-/FullStackApp
-│── /client (React Frontend)
+/E-Learning-Dashboard
+│── /fullstackapp.client (React Frontend)
 │ ├── /public
 │ ├── /src
 │ │ ├── /components
@@ -87,7 +87,7 @@ E-Learning Dashboard is a full-stack web application designed to facilitate onli
 │ │ ├── index.js
 │ └── package.json
 │
-│── /server (ASP.NET Core API)
+│── /FullStackApp.Server (ASP.NET Core API)
 │ ├── /Controllers
 │ ├── /Models
 │ ├── /Data (Database Context)
@@ -98,8 +98,9 @@ E-Learning Dashboard is a full-stack web application designed to facilitate onli
 │ ├── Program.cs
 │ └── server.sln
 │
-│── /database
+│── /FullStackApp.Database
 │ ├── setup.sql (DB Schema and Seed Data)
+```
 
 ## 🏗️ Installation & Setup
 
@@ -113,7 +114,7 @@ cd E-Learning-Dashboard
 **🔹 2. Backend Setup**
 
 ```bash
-cd server
+cd FullStackApp.Server
 # Install .NET dependencies
 dotnet restore
 # Run the API
@@ -134,7 +135,7 @@ dotnet ef database update
 **🔹 4. Frontend Setup**
 
 ```bash
-cd client
+cd fullstackapp.client
 npm install  # Install dependencies
 npm start    # Run React app
 ```
@@ -190,6 +191,36 @@ npm start    # Run React app
 ## 📸 Screenshots
 
 ### 🚀 Screenshots of Key Features
+
+1. For Admin Role 
+
+![image](https://github.com/user-attachments/assets/0e39fc68-66e7-4b4c-bd25-3f79425a4962)
+
+![image](https://github.com/user-attachments/assets/852a301a-68b2-48f4-ab0b-af632b010bbd)
+
+![image](https://github.com/user-attachments/assets/2901eb87-1293-45bb-9e83-fed2945349d1)
+
+![image](https://github.com/user-attachments/assets/759f48e4-359f-4f2a-bf09-b8c518bb923a)
+
+![image](https://github.com/user-attachments/assets/e776b105-e3fb-4284-975c-ad9c1cdb49b4)
+
+![image](https://github.com/user-attachments/assets/7fb6c075-d70d-4199-bf74-203ddbb8bc7c)
+
+![image](https://github.com/user-attachments/assets/e1d671a0-50da-4ae4-825e-ddcb38b51047)
+
+![image](https://github.com/user-attachments/assets/87f43464-eaec-4366-9ac6-2e8b8e1cbd11)
+
+![image](https://github.com/user-attachments/assets/33f16358-ec96-4850-b38a-43fca4553d98)
+
+![image](https://github.com/user-attachments/assets/ab94ebf4-b6b4-4097-9eb0-c3a53b7297cb)
+
+2. For Student Role
+
+![image](https://github.com/user-attachments/assets/89c91dae-e1ae-4fba-b0c9-180859e3290a)
+
+![image](https://github.com/user-attachments/assets/d7f35cff-b7c5-4aab-89fe-bb6ad8c7998f)
+
+![image](https://github.com/user-attachments/assets/acfec3f0-8f5a-42ce-b321-7cb03992b554)
 
 ## 🎯 Future Enhancements
 
